@@ -1,0 +1,59 @@
+---
+title: "PROstate tumor QUANTification"
+format: html
+---
+
+
+
+```{r, include = FALSE,message = FALSE, warning = FALSE, echo = FALSE}
+library(leaflet)
+library(nominatimlite)
+library(dplyr)
+```
+
+## Collaborating Institutions
+
+```{r, message=FALSE, warning=FALSE, results='hide'}
+#| echo: false
+
+# Define universities and their locations
+universities <- data.frame(
+  university = c("Emory", "Gemelli", "Michigan Medicine", "Karolinska Institute",
+                "Lund University","MSKCC","Radboud UMC","San Rafaelle", 
+                "St. Margaret's","The University of Bonn","The University of Chicago",
+                "UCLA","UCSF","University College of London",
+                "University of Kansas Cancer Center","University of Lille Nord de France",
+                "University of Oxford","University of Vienna","Vanderbilt","Yale"),
+  location = c("Atlanta, Georgia, USA", "Rome, Italy", "Ann Arbor, Michigan, USA", 
+              "Stockholm, Sweden", "Lund, Sweden","New York, NY",
+              "Nijmegen, Netherlands","Milan, Italy","Pittsburgh, Pennsylvania",
+              "Bonn, Germany","Chicago, Illinois, USA","Los Angeles, California, USA",
+              "San Francisco, California, USA","London, UK","Kansas City, Missouri, USA",
+              "Lille, France","Oxford, UK","Vienna, Austria","Nashville, Tennessee, USA",
+              "New Haven, Connecticut, USA")
+)
+
+# Geocode locations with full results, suppressing progress bars
+coords <- suppressMessages(
+  suppressWarnings(
+    nominatimlite::geo_lite(universities$location, full_results = TRUE)
+  )
+)
+
+# Join geocoded results back to the original data
+universities_geo <- dplyr::left_join(universities, coords, by = c("location" = "query"))
+```
+
+```{r, message=FALSE, warning=FALSE}
+#| echo: false
+
+# Create map using correct columns
+leaflet() %>%
+  addTiles() %>%
+  addMarkers(
+    ~lon, ~lat, 
+    popup = ~paste("<strong>", university, "</strong><br>", location),
+    data = universities_geo
+  )
+```
+```

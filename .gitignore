@@ -1,0 +1,5 @@
+/.quarto/
+.Rprofile
+.Rproj.user
+.Rhistory
+.RData
