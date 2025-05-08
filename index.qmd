@@ -2,6 +2,7 @@
 format: html
 ---
 
+
 ```{r, include = FALSE,message = FALSE, warning = FALSE, echo = FALSE}
 library(leaflet)
 library(nominatimlite)
@@ -19,7 +20,7 @@ library(dplyr)
 # Define universities and their locations
 universities <- data.frame(
   university = c("Emory", "Gemelli", "Michigan Medicine", "Karolinska Institute",
-                "Lund University","MSKCC","Radboud UMC","San Rafaelle", 
+                "Lund University","Memorial Sloan Kettering Cancer Center","Radboud University Medical Center","San Rafaelle", 
                 "St. Margaret's","The University of Bonn","The University of Chicago",
                 "UCLA","UC San Francisco","University College of London",
                 "University of Kansas Cancer Center","University of Lille Nord de France",
@@ -44,22 +45,42 @@ coords <- suppressMessages(
 universities_geo <- dplyr::left_join(universities, coords, by = c("location" = "query"))
 ```
 
+
+```{r, message=FALSE, warning=FALSE, results='hide'}
+#| echo: false
+
+library(ggplot2)
+library(maps)
+
+# Get world map data
+world_map <- map_data("world")
+
+# Your universities data should already have lon/lat columns
+ggplot() +
+  geom_polygon(data = world_map, aes(x = long, y = lat, group = group),
+               fill = "antiquewhite", color = "gray60") +
+  geom_point(data = universities_geo, aes(x = lon, y = lat),
+             color = "firebrick", size = 3, alpha = 0.8) +
+  theme_minimal(base_size = 16) +
+  labs(title = "Collaborating Institutions", x = NULL, y = NULL) +
+  theme(axis.text = element_blank(),
+        axis.ticks = element_blank(),
+        panel.grid = element_blank())
+```
+
 ```{r, message=FALSE, warning=FALSE}
 #| echo: false
 
-# Create map using correct columns
-leaflet() %>%
+# Create map using correct columns and fit to all markers
+leaflet(universities_geo) %>%
   addTiles() %>%
   addMarkers(
     ~lon, ~lat, 
-    popup = ~paste("<strong>", university, "</strong><br>", location),
-    data = universities_geo
-  )
+    popup = ~paste("<strong>", university, "</strong><br>", location)
+  ) %>% addProviderTiles("Esri.WorldImagery")
 ```
 
 </br>
 Compelling data have recently emerged that, after the change in grading practices in the early 2000s, pattern 3 prostate disease is indolent. This includes studies that pattern 3 cannot metastasize <a href="literature.qmd#ross2012">[1]</a> and does not lead to greater PSA than benign tissue <a href="literature.qmd#andolfi2022">[2]</a>. Several preliminary studies that quantifying the amount of pattern 4 is a better predictor than the current grade group system <a href="literature.qmd#andolfi2022">[2]</a>-<a href="literature.qmd#bommelaere2022">[5]</a>. That said, the best methods to quantify pattern 4 have not been established. For instance, there are various rules about whether gaps between two areas of pattern 4 should count as continuous tumor or not. These are applied in different ways by pathologists at different institutions leading to different results. In one study, there was a fourfold difference in the average amount of pattern 4 in patients treated at two institutions <a href="literature.qmd#andolfi2022">[2]</a>.
 
 We propose to evaluate different approaches to pattern 4 quantification and determine the best method by establishing which best predicts oncologic outcome (such as biochemical recurrence after surgery). Machine learning (ML) is critical to this task because different approaches can be rapidly compared, in contrast to a manual approach by pathologists, in which case every new approach would require a remeasurement. Given that we will have digitized images and oncologic outcome in order to evaluate pattern 4 quantification, we will as a second aim, determine whether ML approaches might be able to predict outcome directly from pattern recognition, without using conventional pathologic approaches.
-
-<strong>For more information please contact vickersa@mskcc.org</strong>

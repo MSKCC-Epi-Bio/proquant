@@ -40,3 +40,7 @@
 .navbar .navbar-collapse {
   justify-content: center !important;
 }
+
+.header-anchor {
+  display: none !important;
+}
