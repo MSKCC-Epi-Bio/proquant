@@ -3,6 +3,7 @@ project:
 
 website:
   title: "proquant"
+  search: false
   navbar:
     left:
       - href: index.qmd
@@ -10,12 +11,12 @@ website:
       - href: presentations.qmd
         text: Presentations
       - href: literature.qmd
-        text: Literature
+        text: Peer-Reviewed Literature
       
 
 format:
   html:
-    theme: yeti
+    theme: cosmo
     css: styles.css
 
 
