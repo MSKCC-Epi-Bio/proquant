@@ -1,10 +1,12 @@
 project:
   type: website
+  
 
 website:
-  title: "proquant"
+  favicon: assets/proquant.png
   search: false
   navbar:
+    logo: assets/proquant.png
     left:
       - href: index.qmd
         text: Home
@@ -18,6 +20,10 @@ format:
   html:
     theme: cosmo
     css: styles.css
+
+metadata:
+  pagetitle: "proquant"
+   
 
 
 

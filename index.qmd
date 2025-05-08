@@ -25,13 +25,16 @@ universities <- data.frame(
                 "UCLA","UC San Francisco","University College of London",
                 "University of Kansas Cancer Center","University of Lille Nord de France",
                 "University of Oxford","University of Vienna","Vanderbilt","Yale"),
+
   location = c("Atlanta, Georgia, USA", "Rome, Italy", "Ann Arbor, Michigan, USA", 
               "Stockholm, Sweden", "Lund, Sweden","New York, NY",
-              "Nijmegen, Netherlands","Milan, Italy","Pittsburgh, Pennsylvania",
+              "Nijmegen, Netherlands","Milan, Italy","Toronto, Canada",
               "Bonn, Germany","Chicago, Illinois, USA","Los Angeles, California, USA",
               "San Francisco, California, USA","London, UK","Kansas City, Missouri, USA",
               "Lille, France","Oxford, UK","Vienna, Austria","Nashville, Tennessee, USA",
-              "New Haven, Connecticut, USA")
+              "New Haven, Connecticut, USA"),
+
+  logo_url = c("assets/emory.png", "assets/gemelli.jfif.png", "assets/michigan.png", "assets/karolinska.png", "assets/lund.png","assets/mskcc.png","assets/radbound.png","assets/sanraf.png","assets/uhn.jpg","assets/Uni-Bonn.png","assets/chicago.png","assets/ucla.png","assets/ucsf.png","assets/ucl.png","assets/ku.png","assets/france.jpg","assets/oxford.png","assets/vienna.jpg","assets/vanderbilt.png","assets/yale.png")
 )
 
 # Geocode locations with full results, suppressing progress bars
@@ -46,36 +49,23 @@ universities_geo <- dplyr::left_join(universities, coords, by = c("location" = "
 ```
 
 
-```{r, message=FALSE, warning=FALSE, results='hide'}
-#| echo: false
-
-library(ggplot2)
-library(maps)
-
-# Get world map data
-world_map <- map_data("world")
-
-# Your universities data should already have lon/lat columns
-ggplot() +
-  geom_polygon(data = world_map, aes(x = long, y = lat, group = group),
-               fill = "antiquewhite", color = "gray60") +
-  geom_point(data = universities_geo, aes(x = lon, y = lat),
-             color = "firebrick", size = 3, alpha = 0.8) +
-  theme_minimal(base_size = 16) +
-  labs(title = "Collaborating Institutions", x = NULL, y = NULL) +
-  theme(axis.text = element_blank(),
-        axis.ticks = element_blank(),
-        panel.grid = element_blank())
-```
-
 ```{r, message=FALSE, warning=FALSE}
 #| echo: false
+
+icons <- icons(
+  iconUrl = universities_geo$logo_url,
+  iconWidth = 32, iconHeight = 32,
+  iconAnchorX = 16, iconAnchorY = 16
+)
 
 # Create map using correct columns and fit to all markers
 leaflet(universities_geo) %>%
   addTiles() %>%
+  setView(lng = -20, lat = 40, zoom = 3) %>%
   addMarkers(
     ~lon, ~lat, 
+    icon = icons,
+    label = ~university, # Show university name on hover
     popup = ~paste("<strong>", university, "</strong><br>", location)
   ) %>% addProviderTiles("Esri.WorldImagery")
 ```
