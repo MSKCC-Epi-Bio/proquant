@@ -10,7 +10,7 @@ library(dplyr)
 ```
 
 
-<img src="assets/proquant.png" alt="Proquant Logo" style="display: block; margin-left: auto; margin-right: auto; max-width: 50%; height: auto;">
+<div class="center-normal" style="font-size:2em; margin-top:1em;"><strong>PRO</strong>state Tumor <strong>QUANT</strong>ification</div>
 
 </br>
 Compelling data have recently emerged that, after the change in grading practices in the early 2000s, pattern 3 prostate disease is indolent. This includes studies that pattern 3 cannot metastasize <a href="literature.qmd#ross2012">[1]</a> and does not lead to greater PSA than benign tissue <a href="literature.qmd#andolfi2022">[2]</a>. Several preliminary studies that quantifying the amount of pattern 4 is a better predictor than the current grade group system <a href="literature.qmd#andolfi2022">[2]</a>-<a href="literature.qmd#bommelaere2022">[5]</a>. That said, the best methods to quantify pattern 4 have not been established. For instance, there are various rules about whether gaps between two areas of pattern 4 should count as continuous tumor or not. These are applied in different ways by pathologists at different institutions leading to different results. In one study, there was a fourfold difference in the average amount of pattern 4 in patients treated at two institutions <a href="literature.qmd#andolfi2022">[2]</a>.
