@@ -4,10 +4,11 @@ project:
   
 
 website:
+  title: "PROstate Tumor QUANTification"
   favicon: assets/proquant.png
   search: false
   navbar:
-    logo: assets/proquant.png
+    #logo: assets/proquant.png
     left:
       - href: index.qmd
         text: Home
@@ -22,8 +23,8 @@ format:
     theme: cosmo
     css: styles.css
 
-metadata:
-  pagetitle: "proquant"
+# metadata:
+#   pagetitle: "proquant"
    
 
 

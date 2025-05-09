@@ -24,7 +24,10 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y libcurl4-openssl-dev libssl-dev libxml2-dev
-          Rscript -e 'install.packages(c("leaflet", "nominatimlite", "dplyr"))'
+          Rscript -e 'install.packages(c("leaflet", "nominatimlite", "dplyr"), lib = Sys.getenv("R_LIBS_USER"), repos = "https://cloud.r-project.org")'
+
+      - name: Show R library paths
+        run: Rscript -e '.libPaths()'
 
       - name: Render Quarto Project
         run: quarto render
