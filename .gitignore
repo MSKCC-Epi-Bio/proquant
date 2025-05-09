@@ -4,4 +4,8 @@
 .Rhistory
 .RData
 _extensions/
+index_files/
+site_libs/
+_site/
+
 

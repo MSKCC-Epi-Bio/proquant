@@ -3,18 +3,18 @@ format: html
 ---
 
 
-```{r, include = FALSE,message = FALSE, warning = FALSE, echo = FALSE}
+```{r setup-libraries, include = FALSE, message = FALSE, warning = FALSE, echo = FALSE}
 library(leaflet)
 library(nominatimlite)
 library(dplyr)
 ```
 
-<div class="center-normal" style="font-size:2em; margin-top:1em;"><strong>PRO</strong>state tumor <strong>QUANT</strong>ification</div>
+<div class="center-normal" style="font-size:2em; margin-top:1em;"><strong>PRO</strong>state Tumor <strong>QUANT</strong>ification</div>
 
 </br>
 <div class="center-normal" style="font-size:1.3em; margin-bottom:1em;">Collaborating Institutions</div>
 
-```{r, message=FALSE, warning=FALSE, results='hide'}
+```{r define-universities-geocode, message=FALSE, warning=FALSE, results='hide'}
 #| echo: false
 
 # Define universities and their locations
@@ -34,7 +34,7 @@ universities <- data.frame(
               "Lille, France","Oxford, UK","Vienna, Austria","Nashville, Tennessee, USA",
               "New Haven, Connecticut, USA"),
 
-  logo_url = c("assets/emory.png", "assets/gemelli.jfif.png", "assets/michigan.png", "assets/karolinska.png", "assets/lund.png","assets/mskcc.png","assets/radbound.png","assets/sanraf.png","assets/uhn.jpg","assets/Uni-Bonn.png","assets/chicago.png","assets/ucla.png","assets/ucsf.png","assets/ucl.png","assets/ku.png","assets/france.jpg","assets/oxford.png","assets/vienna.jpg","assets/vanderbilt.png","assets/yale.png")
+  logo_url = c("assets/emory.png", "assets/gemelli.jfif.png", "assets/michigan.png", "assets/karolinska.png", "assets/lund.png","assets/mskcc.png","assets/radbound.png","assets/sanraf.png","assets/uhn.jpg","assets/Uni-Bonn.png","assets/chicago.png","assets/ucla.png","assets/ucsf.png","assets/ucl.png","assets/ku.png","assets/france.jpg","assets/oxford.png","assets/vienna.jpg","assets/vanderbilt.jpg","assets/yale.png")
 )
 
 # Geocode locations with full results, suppressing progress bars
@@ -49,13 +49,13 @@ universities_geo <- dplyr::left_join(universities, coords, by = c("location" = "
 ```
 
 
-```{r, message=FALSE, warning=FALSE}
+```{r map-icons-leaflet, message=FALSE, warning=FALSE}
 #| echo: false
 
 icons <- icons(
   iconUrl = universities_geo$logo_url,
-  iconWidth = 32, iconHeight = 32,
-  iconAnchorX = 16, iconAnchorY = 16
+  iconWidth = 40, iconHeight = 40,
+  iconAnchorX = 20, iconAnchorY = 20
 )
 
 # Create map using correct columns and fit to all markers
