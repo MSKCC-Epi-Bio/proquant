@@ -3,74 +3,66 @@ format: html
 toc: true
 toc-location: right
 ---
-### Peer-Reviewed Literature
 
 
-[Replacing the Gleason score with pattern 4 quantification](https://pubmed.ncbi.nlm.nih.gov/32304682/){target="_blank"}
+<div class="left" style="font-size:1.5em"><strong>Peer-Reviewed Literature</strong></div>
+
+
+### Editorial: Replace Gleason with pattern 4 quantification
+
+- [Replacing the Gleason score with pattern 4 quantification](https://pubmed.ncbi.nlm.nih.gov/32304682/){target="_blank"}
+  <br><span style="font-size:0.95em;">Vickers AJ, Fine SW. Three Things About Gleason Grading That Just About Everyone Believes But That Are Almost Certainly Wrong. Urology. 2020 Sep;143:16-19. doi: 10.1016/j.urology.2020.03.042. Epub 2020 Apr 15. PMID: 32304682.</span>
 
 ### Pattern 4 Quantification: Prognostic Papers
 
 - [Length of pattern 4 predicts adverse surgical pathology in men with grade group 2 prostate cancer](https://pubmed.ncbi.nlm.nih.gov/30076908/){target="_blank"}
   <br><span style="font-size:0.95em;">Dean LW, Assel M, Sjoberg DD, et al. Clinical Usefulness of Total Length of Gleason Pattern 4 on Biopsy in Men with Grade Group 2 Prostate Cancer. J Urol. 2019;202(2):309-316. doi:10.1016/j.juro.2018.07.062</span>
+
 - [Length of pattern 4 predicts biochemical recurrence in men with grade group 2 prostate cancer](https://pubmed.ncbi.nlm.nih.gov/35363038/){target="_blank"}
   <br><span style="font-size:0.95em;">Perera M, Assel MJ, Benfante NE, et al. Oncologic Outcomes of Total Length Gleason Pattern 4 on Biopsy in Men with Grade Group 2 Prostate Cancer. J Urol. 2022;208(2):309-316. doi:10.1097/JU.0000000000002685</span>
-- [Pattern 4 in men on active surveillance: upgrading a questionable endpoint](https://pubmed.ncbi.nlm.nih.gov/40301553/){target="_blank"}
-  <br><span style="font-size:0.95em;">Uleri A, Baboudjian M, Leni R, et al. Gleason pattern 4 and active surveillance in patients with grade group 2 prostate cancer. Prostate Cancer Prostatic Dis. 2024. doi:10.1038/s41391-025-00977-6</span>
+
+- [Pattern 4 in men on active surveillance: upgrading a questionable endpoint](https://pubmed.ncbi.nlm.nih.gov/39260095/){target="_blank"}
+  <br><span style="font-size:0.95em;">Perera M, Assel M, Nalavenkata S, Khaleel S, Benfante N, Carlsson SV, Reuter VE, Laudone VP, Scardino PT, Touijer KA, Eastham JA, Vickers AJ, Fine SW, Ehdaie B. Quantification of Gleason Pattern 4 Metrics Identifies Pathologic Progression in Patients With Grade Group 2 Prostate Cancer on Active Surveillance. Clin Genitourin Cancer. 2024 Dec;22(6):102204. doi: 10.1016/j.clgc.2024.102204. Epub 2024 Aug 14. PMID: 39260095.</span>
+
 - [Pattern 4 volume best predictor of PSA](https://pubmed.ncbi.nlm.nih.gov/39977387/){target="_blank"}
   <br><span style="font-size:0.95em;">Scuderi S, Tin AL, Klug J, et al. The Absolute Volume of Gleason Pattern 4 on Radical Prostatectomy Is More Strongly Associated With Advanced Stage and Biochemical Recurrence Than Gleason Grade Groups. J Urol. 2024. doi:10.1097/JU.0000000000004484</span>
+
 - [Pattern 4 volume best predictor of advanced pathologic stage](https://pubmed.ncbi.nlm.nih.gov/39977387/){target="_blank"}
   <br><span style="font-size:0.95em;">Scuderi S, Tin AL, Klug J, et al. The Absolute Volume of Gleason Pattern 4 on Radical Prostatectomy Is More Strongly Associated With Advanced Stage and Biochemical Recurrence Than Gleason Grade Groups. J Urol. 2024. doi:10.1097/JU.0000000000004484</span>
+  
 - [Pattern 4 and 5 volume best predictor of distant metastasis](https://pubmed.ncbi.nlm.nih.gov/32171650/){target="_blank"}
-  <br><span style="font-size:0.95em;">Acosta AM, Taplin ME, Mata DA, et al. Volume of Gleason pattern 4 stratifies risk of metastasis and death in patients with Gleason score 3+5=8/5+3=8 positive prostate core biopsies. Hum Pathol. 2020;101:80-87. doi:10.1016/j.humpath.2020.03.001</span>
+  <br><span style="font-size:0.95em;">Thomas Bommelaere, Arnauld Villers, Philippe Puech, Guillaume Ploussard, Julien Labreuche, Elodie Drumez, Xavier Leroy, Jonathan Olivier, Risk Estimation of Metastatic Recurrence After Prostatectomy: A Model Using Preoperative Magnetic Resonance Imaging and Targeted Biopsy, European Urology Open Science,2022,https://doi.org/10.1016/j.euros.2022.04.011.</span>
 
 ---
 
-### Papers where the results are best explained by pattern 4 volume being prognostic
+### Papers best explained by pattern 4 volume being prognostic
 
 - [Tumor volume assessed on MRI prognostic](https://pubmed.ncbi.nlm.nih.gov/39470422/){target="_blank"}
   <br><span style="font-size:0.95em;">Yang DD, Lee LK, Tsui JMG, Leeman JE, McClure HM, Sudhyadhom A, Guthier CV, Taplin ME, Trinh QD, Mouw KW, Martin NE, Orio PF, Nguyen PL, D'Amico AV, Shin KY, Lee KN, King MT. AI-derived Tumor Volume from Multiparametric MRI and Outcomes in Localized Prostate Cancer. Radiology. 2024 Oct;313(1):e240041. doi: 10.1148/radiol.240041. PMID: 39470422.</span>
-- [Clinical low risk cancer at low risk of recurrence even if upgraded at radical prostatectomy](https://pubmed.ncbi.nlm.nih.gov/34319588/){target="_blank"}<br><span style="font-size:0.95em;">Zhen L, Zhien Z, Shengmin Y, Hanzhong L, Xingcheng W, Yi Z, Yi Q, Lin M, Yuliang C, Tianrui F, Weigang Y. Can patients with low-risk prostate cancer really benefit from radical treatment?: A systematic review and network meta-analysis. Andrologia. 2021 Oct;53(9):e14122. doi: 10.1111/and.14122. Epub 2021 Jul 28. PMID: 34319588.</span>
+
+
+- [Clinical low risk cancer at low risk of recurrence even if upgraded at radical prostatectomy](https://pubmed.ncbi.nlm.nih.gov/25913389/){target="_blank"}<br><span style="font-size:0.95em;">Imnadze M, Sjoberg DD, Vickers AJ. Adverse Pathologic Features at Radical Prostatectomy: Effect of Preoperative Risk on Oncologic Outcomes. Eur Urol. 2016 Jan;69(1):143-8. doi: 10.1016/j.eururo.2015.03.044. Epub 2015 Apr 23. PMID: 25913389; PMCID: PMC4618775.</span>
+
 - [Clinical low risk cancer at low risk of metastasis even if upgraded at radical prostatectomy](https://pubmed.ncbi.nlm.nih.gov/29802773/){target="_blank"}<br><span style="font-size:0.95em;">Kovac E, Vertosick EA, Sjoberg DD, Vickers AJ, Stephenson AJ. Effects of pathological upstaging or upgrading on metastasis and cancer-specific mortality in men with clinical low-risk prostate cancer. BJU Int. 2018 Dec;122(6):1003-1009. doi: 10.1111/bju.14418. Epub 2018 Jun 22. PMID: 29802773; PMCID: PMC6737926. </span>
-- [MRI finds tumors in men with negative biopsy that are not aggressive](https://pubmed.ncbi.nlm.nih.gov/39666360/){target="_blank"}
-  <br><span style="font-size:0.95em;"></span>
+
+- [MRI finds tumors in men with negative biopsy that are not aggressive](https://pubmed.ncbi.nlm.nih.gov/34294510/){target="_blank"}
+  <br><span style="font-size:0.95em;">Vickers AJ. Effects of Magnetic Resonance Imaging Targeting on Overdiagnosis and Overtreatment of Prostate Cancer. Eur Urol. 2021 Nov;80(5):567-572. doi: 10.1016/j.eururo.2021.06.026. Epub 2021 Jul 20. Erratum in: Eur Urol. 2022 Sep;82(3):e89. doi: 10.1016/j.eururo.2022.05.022. PMID: 34294510; PMCID: PMC8530856.</span>
  
 
 ---
 
 ### Variation in Pattern 4 Quantification
 
-- [Variability in tumor extent by different pathologists](https://pubmed.ncbi.nlm.nih.gov/39610035/){target="_blank"}
-- [Variability in pattern 4 volume between pathologists at two separate institutions](https://pubmed.ncbi.nlm.nih.gov/32815034/){target="_blank"}
+- [Variability in tumor extent by different pathologists](https://pubmed.ncbi.nlm.nih.gov/39610035/){target="_blank"}<br><span style="font-size:0.95em;">Bernhardt M, Weinhold L, Bremmer F, Chan E, Cheng L, Collins K, Downes M, Greenland N, Hommerding O, Iczkowski KA, Jufe L, Kreft T, van Leenders G, Oxley J, Perry-Keene J, Reis H, Schmid M, Tsuzuki T, Wobker S, Wiliamson SR, Kweldam C, Kristiansen G. Unexpectedly high variability in determining tumour extent in prostatic biopsies: implications for active surveillance. Histopathology. 2025 Mar;86(4):627-639. doi: 10.1111/his.15372. Epub 2024 Nov 28. PMID: 39610035; PMCID: PMC11791730.</span>
 
----
 
-### Papers: pattern 3 is indolent and does not add prognostic value once amount of pattern 4 is known
-
-- [Pattern 3 non-predictive of PSA or advanced surgical pathology once pattern 4 is known](https://pubmed.ncbi.nlm.nih.gov/38278665/){target="_blank"}
-- [Pattern 3 volume does not add to pattern 4 volume to predict advanced pathologic stage](https://pubmed.ncbi.nlm.nih.gov/39977387/){target="_blank"}
-
-- [Pattern 4 and 5 volume best predictor of distant metastasis](https://pubmed.ncbi.nlm.nih.gov/32171650/){target="_blank"}
-
----
-
-### Papers where the results are best explained by pattern 4 volume being prognostic
-
-- [Tumor volume assessed on MRI prognostic](https://pubmed.ncbi.nlm.nih.gov/39470422/){target="_blank"}
-- [Clinical low risk cancer at low risk of recurrence even if upgraded at radical prostatectomy](https://pubmed.ncbi.nlm.nih.gov/34319588/){target="_blank"}
-- [Clinical low risk cancer at low risk of metastasis even if upgraded at radical prostatectomy](https://pubmed.ncbi.nlm.nih.gov/35838831/){target="_blank"}
-- [MRI finds tumors in men with negative biopsy that are not aggressive](https://www.sciencedirect.com/science/article/abs/pii/S0302283821018674?via%3Dihub){target="_blank"}
-
----
-
-### Variation between pathologists in pattern 4 quantification
-
-- [Variability in tumor extent by different pathologists](https://pubmed.ncbi.nlm.nih.gov/39610035/){target="_blank"}
-- [Variability in pattern 4 volume between pathologists at two separate institutions](https://pubmed.ncbi.nlm.nih.gov/32815034/){target="_blank"}
+- [Variability in pattern 4 volume between pathologists at two separate institutions](https://pubmed.ncbi.nlm.nih.gov/35987380/){target="_blank"}<br><span style="font-size:0.95em;">Andolfi C, Vickers AJ, Cooperberg MR, Carroll PR, Cowan JE, Paner GP, Helfand BT, Liauw SL, Eggener SE. Blood Prostate-specific Antigen by Volume of Benign, Gleason Pattern 3 and 4 Prostate Tissue. Urology. 2022 Dec;170:154-160. doi: 10.1016/j.urology.2022.08.014. Epub 2022 Aug 17. PMID: 35987380; PMCID: PMC10515713.</span>
 
 ---
 
 ### Pattern 3: Indolent When Pattern 4 Known
 
 
-- [Pattern 3 non-predictive of PSA or advanced surgical pathology once pattern 4 is known](https://pubmed.ncbi.nlm.nih.gov/38278665/){target="_blank"}
-- [Pattern 3 volume does not add to pattern 4 volume to predict advanced pathologic stage](https://pubmed.ncbi.nlm.nih.gov/39977387/){target="_blank"}
+- [Pattern 3 non-predictive of PSA or advanced surgical pathology once pattern 4 is known](https://pubmed.ncbi.nlm.nih.gov/38278665/){target="_blank"}<br><span style="font-size:0.95em;">Vickers AJ, Assel M, Cooperberg MR, Fine SW, Eggener S. Amount of Gleason Pattern 3 Is Not Predictive of Risk in Grade Group 2-4 Prostate Cancer. Eur Urol. 2024 Jul;86(1):1-3. doi: 10.1016/j.eururo.2024.01.005. Epub 2024 Jan 25. PMID: 38278665.</span>
+
+- [Pattern 3 volume does not add to pattern 4 volume to predict advanced pathologic stage](https://pubmed.ncbi.nlm.nih.gov/39977387/){target="_blank"}<br><span style="font-size:0.95em;">Scuderi S, Tin AL, Klug J, et al. The Absolute Volume of Gleason Pattern 4 on Radical Prostatectomy Is More Strongly Associated With Advanced Stage and Biochemical Recurrence Than Gleason Grade Groups. J Urol. 2024. doi:10.1097/JU.0000000000004484</span>

@@ -8,7 +8,7 @@ toc-location: right
 **The Gleason score was created in 1967 based on study of 6-month survival on a small number of patients.** It has not been importantly changed since.
 
 <div class="center-normal">
-  ![](assets/picture1.png){width="30%"}
+  ![](assets/picture1.png){width="40%"}
 </div>
 
  
@@ -30,7 +30,7 @@ Hypothetical example of two patients with a single positive core. The patient wh
 Biopsy cores from two actual patients with Grade group 2 being followed on active surveillance. The patient with a small increase in pattern 4 but a decrease in pattern 3 is upgraded to grade group 3; the patient with a large increase in both pattern 4 and overall cancer is not upgraded and remains at grade group 2. 
 
 <div class="center-normal">
-![](assets/picture3.png){width="60%"}
+![](assets/picture3.png){width="80%"}
 </div>
 
 Surgical pathology findings from two actual patients. The patient assigned grade group 4 has 100-fold less cancer.  

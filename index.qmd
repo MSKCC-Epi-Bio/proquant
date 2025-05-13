@@ -12,6 +12,8 @@ library(dplyr)
 
 <div class="center-normal" style="font-size:1.5em"><strong>PRO</strong>state Tumor <strong>QUANT</strong>ification collaborative group</div>
 
+### Reforming prostate cancer risk stratification by tumor quantification 
+
 The Gleason grade remains the dominant predictor of outcomes in localized prostate cancer and, accordingly, the major determinant of treatment. How pathologists grade areas of tissue has evolved over time in the light of new knowledge. But how the distribution and quantity of those patterns are combined into a score has not changed since 1967, when the Gleason score was developed on a small number of patients using six-month overall survival as an endpoint.
 
 For patients in grade group 2 to 4, which constitute the largest group of patients, the Gleason score is based on the relative proportions of indolent (patten 3) to more aggressive disease (pattern 4). In almost no other cancer are proportions used or the quantity of indolent disease considered. More typically, risk stratification is based on the absolute quantity of tumor.

@@ -53,8 +53,11 @@
   background: #e9ecef;
 }
 
-.custom-sidebar .img {
-  max-height: 5px;
+.sidebar-logo {
+  height: 110px;
+  width: auto;
+  display: block;
+  
 }
 
 
