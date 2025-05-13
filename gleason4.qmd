@@ -1,0 +1,49 @@
+---
+format: html
+toc: true
+toc-location: right
+---
+## What is wrong with the Gleason score?
+
+**The Gleason score was created in 1967 based on study of 6-month survival on a small number of patients.** It has not been importantly changed since.
+
+<div class="center-normal">
+  ![](assets/picture1.png){width="30%"}
+</div>
+
+ 
+
+**The Gleason score is based on the proportion of more versus less aggressive disease.** This is very unusual in cancer and leads to some counterintuitive results for individual patients.  
+
+ 
+
+**Schematic representation of examples of discordance between tumor quantification and Gleason scoring.** Blue: Normal tissue. Orange: pattern 3. Red: pattern 4.  
+
+Hypothetical example of two patients with a single positive core. The patient who has the core with the most pattern 4 and the most cancer overall is assigned grade group 2; the patient with the core with the least pattern 4 and the least cancer overall is assigned grade group 4.  
+
+<div class="center-normal">
+![](assets/picture2.png){width="50%"}
+</div>
+
+ 
+
+Biopsy cores from two actual patients with Grade group 2 being followed on active surveillance. The patient with a small increase in pattern 4 but a decrease in pattern 3 is upgraded to grade group 3; the patient with a large increase in both pattern 4 and overall cancer is not upgraded and remains at grade group 2. 
+
+<div class="center-normal">
+![](assets/picture3.png){width="60%"}
+</div>
+
+Surgical pathology findings from two actual patients. The patient assigned grade group 4 has 100-fold less cancer.  
+
+<div class="center-normal">
+![](assets/picture4.png){width="50%"}
+</div>
+
+ 
+ 
+
+The Gleason score is correlated with the amount of pattern 4 disease. This likely explains why it has stood the test of time as a predictor. The figure below shows volume of pattern 4 in the radical prostatectomy specimens of men with different Gleason score: light grey: 3+4; intermediate grey: 4_3; dark grey: 4+4. 
+
+<div class="center-normal">
+![](assets/picture5.png){width="50%"}
+</div>

@@ -4,18 +4,20 @@ project:
   
 
 website:
-  #title: "PROstate Tumor QUANTification"
-  favicon: assets/proquant.png
-  search: false
-  navbar:
+  sidebar:
+    style: "docked"
     logo: assets/proquant.png
-    left:
+    contents:
       - href: index.qmd
         text: Home
-      - href: presentations.qmd
-        text: Presentations
+      - href: gleason4.qmd
+        text: What is wrong with the Gleason score?
+      - href: pathogist.qmd
+        text: Why is there variation between pathologists measurements?
       - href: literature.qmd
         text: Peer-Reviewed Literature
+  favicon: assets/proquant.png
+  search: false
       
 
 format:

@@ -1,7 +1,8 @@
 ---
 format: html
+toc: true
+toc-location: right
 ---
-
 
 ```{r setup-libraries, include = FALSE, message = FALSE, warning = FALSE, echo = FALSE}
 library(leaflet)
@@ -9,16 +10,29 @@ library(nominatimlite)
 library(dplyr)
 ```
 
+<div class="center-normal" style="font-size:1.5em"><strong>PRO</strong>state Tumor <strong>QUANT</strong>ification collaborative group</div>
 
-<div class="center-normal" style="font-size:2em; margin-top:1em;"><strong>PRO</strong>state Tumor <strong>QUANT</strong>ification</div>
+The Gleason grade remains the dominant predictor of outcomes in localized prostate cancer and, accordingly, the major determinant of treatment. How pathologists grade areas of tissue has evolved over time in the light of new knowledge. But how the distribution and quantity of those patterns are combined into a score has not changed since 1967, when the Gleason score was developed on a small number of patients using six-month overall survival as an endpoint.
 
-</br>
-Compelling data have recently emerged that, after the change in grading practices in the early 2000s, pattern 3 prostate disease is indolent. This includes studies that pattern 3 cannot metastasize <a href="literature.qmd#ross2012">[1]</a> and does not lead to greater PSA than benign tissue <a href="literature.qmd#andolfi2022">[2]</a>. Several preliminary studies that quantifying the amount of pattern 4 is a better predictor than the current grade group system <a href="literature.qmd#andolfi2022">[2]</a>-<a href="literature.qmd#bommelaere2022">[5]</a>. That said, the best methods to quantify pattern 4 have not been established. For instance, there are various rules about whether gaps between two areas of pattern 4 should count as continuous tumor or not. These are applied in different ways by pathologists at different institutions leading to different results. In one study, there was a fourfold difference in the average amount of pattern 4 in patients treated at two institutions <a href="literature.qmd#andolfi2022">[2]</a>.
+For patients in grade group 2 to 4, which constitute the largest group of patients, the Gleason score is based on the relative proportions of indolent (patten 3) to more aggressive disease (pattern 4). In almost no other cancer are proportions used or the quantity of indolent disease considered. More typically, risk stratification is based on the absolute quantity of tumor.
 
-We propose to evaluate different approaches to pattern 4 quantification and determine the best method by establishing which best predicts oncologic outcome (such as biochemical recurrence after surgery). Machine learning (ML) is critical to this task because different approaches can be rapidly compared, in contrast to a manual approach by pathologists, in which case every new approach would require a remeasurement. Given that we will have digitized images and oncologic outcome in order to evaluate pattern 4 quantification, we will as a second aim, determine whether ML approaches might be able to predict outcome directly from pattern recognition, without using conventional pathologic approaches.
+Preliminary studies that quantifying the amount of pattern 4 is a better predictor of oncologic outcome than the current Gleason score. However, the best methods to quantify pattern 4 have not been established. For instance, pathologists vary about how to measure the amount of cancer in a core where two cores are separated by benign tissue. This can lead to as much as a fourfold difference in the amount of pattern 4 assessed by different pathologists.
 
-</br>
-<div class="center-normal" style="font-size:1.3em; margin-bottom:1em;">Collaborating Institutions</div>
+The ProQuant collaborative group proposes to share images and data in order to evaluate different approaches to quantifying the absolute amount of pattern 4 and determine which best predicts oncologic outcomes such as biochemical recurrence after surgery. Machine learning is critical to this task because different approaches can be rapidly compared. This is in contrast to a manual approach by pathologists, in which case every new approach would require a remeasurement. Collaborating with multiple centers will allow us to assess the robustness of our findings across patients, surgeons, and digitization methods. The formulae we develop will be open source. It is our intent to collaborate with different machine learning companies to confirm that our findings as to the best methods of tumor quantification are robust across platforms. Moreover, because access to digital pathology is not universal, we will evaluate and develop methods for cancer and pattern 4 quantification that can be implemented using standard light microscopy.
+
+Our work will involve four phases:
+
+1) How best to measure pattern 4 in a single biopsy core
+
+2) How best to combine pattern 4 measurement if multiple cores are positive
+
+3) How to integrate imaging into pattern 4 quantification
+
+4) How to adapt existing treatment and prediction algorithms from Gleason score to pattern 4 quantification
+
+Links to an editorial describing the work of our group in more detail are given on the <a href="literature.qmd">“Peer-Reviewed Literature”</a> page.
+
+### Collaborating Institutions{.center}
 
 ```{r define-universities-geocode, message=FALSE, warning=FALSE, results='hide'}
 #| echo: false
@@ -75,3 +89,7 @@ leaflet(universities_geo) %>%
     popup = ~paste("<strong>", university, "</strong><br>", location)
   ) %>% addProviderTiles("Esri.WorldImagery")
 ```
+
+
+### Contact Information
+ If you are interested in collaborating contact <a href="mailto:vickersa@mskcc.org">Andrew Vickers</a>
