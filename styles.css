@@ -4,19 +4,6 @@
   font-weight: normal;
 }
 
-/* Increase the navbar logo size */
-.navbar-logo {
-    max-height: 40px;
-    width: auto;
-}
-
-/* Change navbar color to light gray and make it sticky */
-.navbar {
-  border-bottom: 1px solid #dee2e6;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
 
 /* Hide the search icon (magnifying glass) */
 .navbar .navbar-search .form-control {
@@ -24,23 +11,53 @@
   padding-left: 0.75rem !important;
 }
 
-/* .navbar-brand,
-.navbar-nav .nav-link {
-  color: #ffffff !important;
-}
 
-.navbar-nav .nav-link:hover {
-  color: #ffffff !important;
-} */
-
-/* Center the Quarto navbar */
-.navbar-nav {
-  margin-left: auto;
-  margin-right: auto;
+/* Custom Sidebar Styles */
+.custom-sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 230px;
+  height: 100vh;
+  background: #f8f9fa;
+  padding-top: 40px;
   display: flex;
-  justify-content: center;
-  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  border-right: 1px solid #e5e5e5;
+  box-shadow: 2px 0 6px rgba(0,0,0,0.03);
+  z-index: 1001;
 }
+
+.custom-sidebar .nav-link {
+  color: #3366cc;
+  text-decoration: none;
+  margin: 12px 0 0 24px;
+  font-size: 1.1em;
+  transition: color 0.2s, border-left 0.2s;
+  padding: 6px 0 6px 8px;
+  width: 90%;
+  border-left: 3px solid transparent;
+}
+
+.custom-sidebar .nav-link:hover {
+  color: #003366;
+  border-left: 3px solid #3366cc;
+  background: #eef2fa;
+}
+
+.custom-sidebar .nav-link.active {
+  font-weight: bold;
+  color: #222;
+  border-left: 3px solid #222;
+  background: #e9ecef;
+}
+
+.custom-sidebar .img {
+  max-height: 5px;
+}
+
+
 
 .navbar .navbar-collapse {
   justify-content: center !important;
