@@ -11,4 +11,6 @@ The slide below shows a biopsy core with pattern 3 shaded red and pattern 4 shad
 
 4. **Pathologists vary as to how to measure pattern 4.** Once tumor length has been estimated, this needs to be converted into a length of pattern 4. This can be done by estimating the length of each purple areas, or by estimating the percentage of tumor that is pattern 4 and then multiplying by overall tumor length. If the latter method is used, this can be done separately for each focus or overall for a core. 
 
+<div class="center-normal">
 ![](assets/foci.png)
+</div>
