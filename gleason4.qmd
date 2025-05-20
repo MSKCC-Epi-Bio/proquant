@@ -33,7 +33,7 @@ Surgical pathology findings from two actual patients are given below. The patien
  
  
 
-The Gleason score is correlated with the amount of pattern 4 disease. This likely explains why it has stood the test of time as a predictor. The figure below shows volume of pattern 4 in the radical prostatectomy specimens of men with different Gleason score. 
+**Why has Gleason score stood the test of time as a predictor?** The Gleason score is correlated with the amount of pattern 4 disease. The figure below shows volume of pattern 4 in the radical prostatectomy specimens of men with different Gleason score.
 
 <div class="center-normal">
 ![](assets/picture5.png){width="50%"}
