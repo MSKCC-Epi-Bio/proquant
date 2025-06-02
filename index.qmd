@@ -43,10 +43,10 @@ Links to an editorial describing the work of our group in more detail are given 
 universities <- data.frame(
   university = c("University of Copenhagen","Emory", "Gemelli", "Michigan Medicine", "Karolinska Institute",
                 "Lund University","Memorial Sloan Kettering Cancer Center", "Martini-Klinik","Radboud University Medical Center","San Rafaelle", 
-                "St. Margaret's","The University of Bonn","The University of Chicago",
+                "University Health Network","The University of Bonn","The University of Chicago",
                 "UCLA","UC San Francisco","University College of London",
                 "University of Kansas Cancer Center","University of Lille Nord de France",
-                "University of Oxford","University of Vienna","Vanderbilt","Yale"),
+                "University of Oxford","University of Vienna","Vanderbilt","Yale", "Georgetown University Medical Center","Royal Brisbane and Women's Hospital","University Hospitals Leuven","Alfred Health","Amsterdam University Medical Center","University of San Carlos","University of Turku"),
 
   location = c("Copenhagen, Denmark", "Atlanta, Georgia, USA", "Rome, Italy", "Ann Arbor, Michigan, USA", 
               "Stockholm, Sweden", "Lund, Sweden","New York, NY", "Hamburg, Germany",
@@ -54,9 +54,9 @@ universities <- data.frame(
               "Bonn, Germany","Chicago, Illinois, USA","Los Angeles, California, USA",
               "San Francisco, California, USA","London, UK","Kansas City, Missouri, USA",
               "Lille, France","Oxford, UK","Vienna, Austria","Nashville, Tennessee, USA",
-              "New Haven, Connecticut, USA"),
+              "New Haven, Connecticut, USA","Washington, DC, USA","Brisbane, Australia","Leuven, Belgium","Melbourne, Australia","Amsterdam, Netherlands","Madrid, Spain","Turku, Finland"),
 
-  logo_url = c("assets/copenhagen.png", "assets/emory.png", "assets/gemelli.jfif.png", "assets/michigan.png", "assets/karolinska.png", "assets/lund.png","assets/mskcc.png","assets/martini.png","assets/radbound.png","assets/sanraf.png","assets/uhn.jpg","assets/Uni-Bonn.png","assets/chicago.png","assets/ucla.png","assets/ucsf.png","assets/ucl.png","assets/ku.png","assets/france.jpg","assets/oxford.png","assets/vienna.jpg","assets/vanderbilt.jpg","assets/yale.png")
+  logo_url = c("assets/copenhagen.png", "assets/emory.png", "assets/gemelli.jfif.png", "assets/michigan.png", "assets/karolinska.png", "assets/lund.png","assets/mskcc.png","assets/martini.png","assets/radbound.png","assets/sanraf.png","assets/uhn.jpg","assets/Uni-Bonn.png","assets/chicago.png","assets/ucla.png","assets/ucsf.png","assets/ucl.png","assets/ku.png","assets/france.jpg","assets/oxford.png","assets/vienna.jpg","assets/vanderbilt.jpg","assets/yale.png", "assets/georgetown.jpg", "assets/brisbane.png", "assets/leuven.png", "assets/alfred.jpg", "assets/amsterdam.png", "assets/sancarlos.JPG", "assets/turku.png")
 )
 
 # Geocode locations with full results, suppressing progress bars
@@ -83,7 +83,7 @@ icons <- icons(
 # Create map using correct columns and fit to all markers
 leaflet(universities_geo) %>%
   addTiles() %>%
-  setView(lng = -20, lat = 40, zoom = 3) %>%
+  #setView(lng = -20, lat = 40, zoom = 3) %>%
   addMarkers(
     ~lon, ~lat, 
     icon = icons,
