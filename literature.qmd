@@ -64,7 +64,7 @@ toc-location: right
 
 ---
 
-### Pattern 3 Non Proactive When Pattern 4 Known
+### Pattern 3 Not Predictive When Pattern 4 Known
 
 
 - [Pattern 3 non-predictive of PSA or advanced surgical pathology once pattern 4 is known](https://pubmed.ncbi.nlm.nih.gov/38278665/){target="_blank"}<br><span style="font-size:0.95em;">Vickers AJ, Assel M, Cooperberg MR, Fine SW, Eggener S. Amount of Gleason Pattern 3 Is Not Predictive of Risk in Grade Group 2-4 Prostate Cancer. Eur Urol. 2024 Jul;86(1):1-3. doi: 10.1016/j.eururo.2024.01.005. Epub 2024 Jan 25. PMID: 38278665.</span>
