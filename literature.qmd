@@ -34,7 +34,7 @@ toc-location: right
   <br><span style="font-size:0.95em;">Thomas Bommelaere, Arnauld Villers, Philippe Puech, Guillaume Ploussard, Julien Labreuche, Elodie Drumez, Xavier Leroy, Jonathan Olivier, Risk Estimation of Metastatic Recurrence After Prostatectomy: A Model Using Preoperative Magnetic Resonance Imaging and Targeted Biopsy, European Urology Open Science,2022,https://doi.org/10.1016/j.euros.2022.04.011.</span>
 
 
--[Pattern 4 quantification superior to Gleason score and multivariable models for predicting distant metastasis](https://pubmed.ncbi.nlm.nih.gov/40774801){target="_blank"}<br><span style="font-size:0.95em;">Olivier J, Vertosick E, Delobel L, Bommelaere T, Puech P, Leroy X, Vickers A, Villers A. Quantification of prostate cancer Gleason pattern 4 to predict oncological outcome. BJU Int. 2025 Aug 7. doi: 10.1111/bju.16884. PMID: 40774801.</span>
+- [Pattern 4 quantification superior to Gleason score and multivariable models for predicting distant metastasis](https://pubmed.ncbi.nlm.nih.gov/40774801){target="_blank"}<br><span style="font-size:0.95em;">Olivier J, Vertosick E, Delobel L, Bommelaere T, Puech P, Leroy X, Vickers A, Villers A. Quantification of prostate cancer Gleason pattern 4 to predict oncological outcome. BJU Int. 2025 Aug 7. doi: 10.1111/bju.16884. PMID: 40774801.</span>
 
 ---
 
