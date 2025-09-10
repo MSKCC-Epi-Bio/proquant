@@ -46,7 +46,7 @@ universities <- data.frame(
                 "University Health Network","The University of Bonn","The University of Chicago",
                 "UCLA","UC San Francisco","University College of London",
                 "University of Kansas Cancer Center","University of Lille Nord de France",
-                "University of Oxford","University of Vienna","Vanderbilt","Yale", "Georgetown University Medical Center","Royal Brisbane and Women's Hospital","University Hospitals Leuven","Alfred Health","Amsterdam University Medical Center","University of San Carlos","University of Turku"),
+                "University of Oxford","University of Vienna","Vanderbilt","Yale", "Georgetown University Medical Center","Royal Brisbane and Women's Hospital","University Hospitals Leuven","Alfred Health","Amsterdam University Medical Center","University of San Carlos","University of Turku","Monash University","University Hospital of Zürich","Barts Cancer Institute","Northern Westchester Hospital","Urological Research Network"),
 
   location = c("Copenhagen, Denmark", "Atlanta, Georgia, USA", "Rome, Italy", "Ann Arbor, Michigan, USA", 
               "Stockholm, Sweden", "Lund, Sweden","New York, NY", "Hamburg, Germany",
@@ -54,9 +54,9 @@ universities <- data.frame(
               "Bonn, Germany","Chicago, Illinois, USA","Los Angeles, California, USA",
               "San Francisco, California, USA","London, UK","Kansas City, Missouri, USA",
               "Lille, France","Oxford, UK","Vienna, Austria","Nashville, Tennessee, USA",
-              "New Haven, Connecticut, USA","Washington, DC, USA","Brisbane, Australia","Leuven, Belgium","Melbourne, Australia","Amsterdam, Netherlands","Madrid, Spain","Turku, Finland"),
+              "New Haven, Connecticut, USA","Washington, DC, USA","Brisbane, Australia","Leuven, Belgium","Melbourne, Australia","Amsterdam, Netherlands","Madrid, Spain","Turku, Finland","Melbourne, Australia","Zürich, Switzerland","London, UK","Mount Kisco, New York","Miami, Florida"),
 
-  logo_url = c("assets/copenhagen.png", "assets/emory.png", "assets/gemelli.jfif.png", "assets/michigan.png", "assets/karolinska.png", "assets/lund.png","assets/mskcc.png","assets/martini.png","assets/radbound.png","assets/sanraf.png","assets/uhn.jpg","assets/Uni-Bonn.png","assets/chicago.png","assets/ucla.png","assets/ucsf.png","assets/ucl.png","assets/ku.png","assets/france.jpg","assets/oxford.png","assets/vienna.jpg","assets/vanderbilt.jpg","assets/yale.png", "assets/georgetown.jpg", "assets/brisbane.png", "assets/leuven.png", "assets/alfred.jpg", "assets/amsterdam.png", "assets/sancarlos.JPG", "assets/turku.png")
+  logo_url = c("assets/copenhagen.png", "assets/emory.png", "assets/gemelli.jfif.png", "assets/michigan.png", "assets/karolinska.png", "assets/lund.png","assets/mskcc.png","assets/martini.png","assets/radbound.png","assets/sanraf.png","assets/uhn.jpg","assets/Uni-Bonn.png","assets/chicago.png","assets/ucla.png","assets/ucsf.png","assets/ucl.png","assets/ku.png","assets/france.jpg","assets/oxford.png","assets/vienna.jpg","assets/vanderbilt.jpg","assets/yale.png", "assets/georgetown.jpg", "assets/brisbane.png", "assets/leuven.png", "assets/alfred.jpg", "assets/amsterdam.png", "assets/sancarlos.JPG", "assets/turku.png", "assets/monash.png", "assets/zurich.jpg", "assets/barts.jpg", "assets/nw.jpg", "assets/ur.png")
 )
 
 # Geocode locations with full results, suppressing progress bars
