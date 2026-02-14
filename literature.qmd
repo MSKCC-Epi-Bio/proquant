@@ -7,6 +7,10 @@ toc-location: right
 
 <div class="left" style="font-size:1.5em"><strong>Peer-Reviewed Literature</strong></div>
 
+### Editorial: About ProQuant
+
+- [Evaluating Tumor Quantification in Place of Proportions in Prostate Cancer: Principles of the ProQuant Group](https://pubmed.ncbi.nlm.nih.gov/41419390/){target="_blank"}
+  <br><span style="font-size:0.95em;">Vickers AJ, Fine S; ProQuant Group. Evaluating Tumor Quantification in Place of Proportions in Prostate Cancer: Principles of the ProQuant Group. Eur Urol. 2025 Dec 18:S0302-2838(25)04835-3. doi: 10.1016/j.eururo.2025.11.013. Epub ahead of print. PMID: 41419390.</span>
 
 ### Editorial: Replace Gleason with pattern 4 quantification
 
