@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.34">
+<meta name="generator" content="quarto-1.8.27">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -29,14 +29,15 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/clipboard/clipboard.min.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-273eb6687cef1fb3adf60661816a0809.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-251449ada0ddbdd49c494e2ec9d5d6a9.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "language": {
     "search-no-results-text": "No results",
@@ -78,7 +79,8 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
       <a href="./index.html" class="sidebar-logo-link">
-      <img src="./assets/proquant.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      <img src="./assets/proquant.png" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none">
+      <img src="./assets/proquant.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
       </a>
       </div>
     <div class="sidebar-menu-container"> 
@@ -117,7 +119,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#editorial-replace-gleason-with-pattern-4-quantification" id="toc-editorial-replace-gleason-with-pattern-4-quantification" class="nav-link active" data-scroll-target="#editorial-replace-gleason-with-pattern-4-quantification">Editorial: Replace Gleason with pattern 4 quantification</a></li>
+  <li><a href="#editorial-about-proquant" id="toc-editorial-about-proquant" class="nav-link active" data-scroll-target="#editorial-about-proquant">Editorial: About ProQuant</a></li>
+  <li><a href="#editorial-replace-gleason-with-pattern-4-quantification" id="toc-editorial-replace-gleason-with-pattern-4-quantification" class="nav-link" data-scroll-target="#editorial-replace-gleason-with-pattern-4-quantification">Editorial: Replace Gleason with pattern 4 quantification</a></li>
   <li><a href="#pattern-4-quantification-is-highly-prognostic" id="toc-pattern-4-quantification-is-highly-prognostic" class="nav-link" data-scroll-target="#pattern-4-quantification-is-highly-prognostic">Pattern 4 Quantification is highly prognostic</a></li>
   <li><a href="#findings-best-explained-by-pattern-4-volume-being-prognostic" id="toc-findings-best-explained-by-pattern-4-volume-being-prognostic" class="nav-link" data-scroll-target="#findings-best-explained-by-pattern-4-volume-being-prognostic">Findings best explained by pattern 4 volume being prognostic</a></li>
   <li><a href="#variation-in-pattern-4-quantification" id="toc-variation-in-pattern-4-quantification" class="nav-link" data-scroll-target="#variation-in-pattern-4-quantification">Variation in Pattern 4 Quantification</a></li>
@@ -134,6 +137,12 @@ ul.task-list li input[type="checkbox"] {
 <div class="left" style="font-size:1.5em">
 <strong>Peer-Reviewed Literature</strong>
 </div>
+<section id="editorial-about-proquant" class="level3">
+<h3 class="anchored" data-anchor-id="editorial-about-proquant">Editorial: About ProQuant</h3>
+<ul>
+<li><a href="https://pubmed.ncbi.nlm.nih.gov/41419390/" target="_blank">Evaluating Tumor Quantification in Place of Proportions in Prostate Cancer: Principles of the ProQuant Group</a> <br><span style="font-size:0.95em;">Vickers AJ, Fine S; ProQuant Group. Evaluating Tumor Quantification in Place of Proportions in Prostate Cancer: Principles of the ProQuant Group. Eur Urol. 2025 Dec 18:S0302-2838(25)04835-3. doi: 10.1016/j.eururo.2025.11.013. Epub ahead of print. PMID: 41419390.</span></li>
+</ul>
+</section>
 <section id="editorial-replace-gleason-with-pattern-4-quantification" class="level3">
 <h3 class="anchored" data-anchor-id="editorial-replace-gleason-with-pattern-4-quantification">Editorial: Replace Gleason with pattern 4 quantification</h3>
 <ul>
@@ -235,13 +244,14 @@ ul.task-list li input[type="checkbox"] {
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
