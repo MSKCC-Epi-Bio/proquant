@@ -48,18 +48,6 @@ jobs:
           libsqlite3-dev \
           libmagick++-dev
 
-      - name: Cache R packages
-        uses: actions/cache@v3
-        with:
-          path: |
-            ~/.local/share/renv
-            ~/Library/Caches/renv
-            ~/.cache/renv
-          key: ${{ runner.os }}-renv-${{ hashFiles('renv.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-renv-
-            ${{ runner.os }}-
-
       - name: Install R dependencies
         run: |
           lib <- Sys.getenv("R_LIBS_USER")
@@ -71,8 +59,11 @@ jobs:
           .libPaths(c(lib, .libPaths()))
           install.packages("renv", repos = "https://cloud.r-project.org", lib = lib)
           options(Ncpus = 2)
+          Sys.setenv(RENV_CONFIG_CACHE_ENABLED = "FALSE")
           cat("Restoring packages from lockfile into R_LIBS_USER\n")
           renv::restore(confirm = FALSE, library = lib, rebuild = c("xfun", "knitr", "rmarkdown"))
+          cat("Installing Quarto-critical packages directly into R_LIBS_USER\n")
+          install.packages(c("xfun", "knitr", "rmarkdown"), repos = "https://cloud.r-project.org", lib = lib)
         shell: Rscript {0}
 
       - name: Verify Quarto R packages
