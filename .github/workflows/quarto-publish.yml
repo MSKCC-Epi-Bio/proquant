@@ -62,14 +62,15 @@ jobs:
 
       - name: Install R dependencies
         run: |
-          install.packages("renv", repos = "https://cloud.r-project.org")
-          options(Ncpus = 2)
           lib <- Sys.getenv("R_LIBS_USER")
           cat("Resetting R_LIBS_USER:", lib, "\n")
           if (dir.exists(lib)) {
             unlink(list.files(lib, all.files = TRUE, full.names = TRUE, no.. = TRUE), recursive = TRUE, force = TRUE)
           }
           dir.create(lib, recursive = TRUE, showWarnings = FALSE)
+          .libPaths(c(lib, .libPaths()))
+          install.packages("renv", repos = "https://cloud.r-project.org", lib = lib)
+          options(Ncpus = 2)
           cat("Restoring packages from lockfile into R_LIBS_USER\n")
           renv::restore(confirm = FALSE, library = lib, rebuild = c("xfun", "knitr", "rmarkdown"))
         shell: Rscript {0}
