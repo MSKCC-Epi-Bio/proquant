@@ -64,15 +64,19 @@ jobs:
       - name: Install R dependencies
         run: |
           install.packages("renv", repos = "https://cloud.r-project.org")
-          # Set up parallel installation
           options(Ncpus = 2)
-          # Check if packages are already installed
-          if (renv::status()$synchronized) {
-            cat("All packages are already synchronized, skipping restore\n")
-          } else {
-            cat("Restoring packages from lockfile\n")
-            renv::restore(confirm = FALSE, library = .libPaths()[1])
-          }
+          cat("Restoring packages from lockfile into R_LIBS_USER\n")
+          renv::restore(confirm = FALSE, library = Sys.getenv("R_LIBS_USER"))
+        shell: Rscript {0}
+
+      - name: Verify Quarto R packages
+        run: |
+          library(knitr)
+          library(rmarkdown)
+          library(xfun)
+          cat("knitr:", as.character(packageVersion("knitr")), "\n")
+          cat("rmarkdown:", as.character(packageVersion("rmarkdown")), "\n")
+          cat("xfun:", as.character(packageVersion("xfun")), "\n")
         shell: Rscript {0}
 
       - name: Show R library paths
