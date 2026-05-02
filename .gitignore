@@ -7,7 +7,4 @@ _extensions/
 index_files/
 site_libs/
 _site/
-
-
-
 **/*.quarto_ipynb
