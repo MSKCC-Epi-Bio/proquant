@@ -6,7 +6,6 @@ toc-location: right
 
 ```{r setup-libraries, include = FALSE, message = FALSE, warning = FALSE, echo = FALSE}
 library(leaflet)
-library(nominatimlite)
 library(dplyr)
 ```
 
@@ -39,35 +38,45 @@ Links to an editorial describing the work of our group in more detail are given 
 ```{r define-universities-geocode, message=FALSE, warning=FALSE, results='hide'}
 #| echo: false
 
-# Define universities and their locations
-universities <- data.frame(
+# Define universities, their locations, and map coordinates.
+# Coordinates are stored here rather than geocoded during render so the map is
+# stable and rendering does not depend on an external geocoding service.
+universities_geo <- data.frame(
   university = c("University of Copenhagen", "Emory", "Gemelli", "Michigan Medicine", "Karolinska Institute",
-                 "Lund University", "Memorial Sloan Kettering Cancer Center", "Martini-Klinik", "Radboud University Medical Center", "San Rafaelle",
+                 "Lund University", "Memorial Sloan Kettering Cancer Center", "Weill Cornell Medical Center", "Martini-Klinik", "Radboud University Medical Center", "San Rafaelle",
                  "University Health Network", "The University of Bonn", "The University of Chicago",
                  "UCLA", "UC San Francisco", "University College of London",
                  "University of Kansas Cancer Center", "University of Lille Nord de France",
                  "University of Oxford", "University of Vienna", "Vanderbilt", "Yale", "Georgetown University Medical Center", "Royal Brisbane and Women's Hospital", "University Hospitals Leuven", "Alfred Health", "Amsterdam University Medical Center", "University of San Carlos", "University of Turku", "Monash University", "University Hospital of Zürich", "Barts Cancer Institute", "Northern Westchester Hospital", "Urological Research Network", "University of California, Irvine", "University of Padua", "German Cancer Research Center", "Erasmus University Medical Center", "Hospital Clínic de Barcelona", "Centre of Postgraduate Medical Education", "Cleveland Clinic"),
 
   location = c("Copenhagen, Denmark", "Atlanta, Georgia, USA", "Rome, Italy", "Ann Arbor, Michigan, USA",
-               "Stockholm, Sweden", "Lund, Sweden", "New York, NY", "Hamburg, Germany",
+               "Stockholm, Sweden", "Lund, Sweden", "New York, NY", "New York, NY", "Hamburg, Germany",
                "Nijmegen, Netherlands", "Milan, Italy", "Toronto, Canada",
                "Bonn, Germany", "Chicago, Illinois, USA", "Los Angeles, California, USA",
                "San Francisco, California, USA", "London, UK", "Kansas City, Missouri, USA",
                 "Lille, France", "Oxford, UK", "Vienna, Austria", "Nashville, Tennessee, USA",
                 "New Haven, Connecticut, USA", "Washington, DC, USA", "Brisbane, Australia", "Leuven, Belgium", "Melbourne, Australia", "Amsterdam, Netherlands", "Madrid, Spain", "Turku, Finland", "Melbourne, Australia", "Zurich, Switzerland", "London, UK", "Mount Kisco, New York", "Miami, Florida", "Irvine, California, USA", "Padua, Italy", "Heidelberg, Germany", "Rotterdam, Netherlands", "Barcelona, Spain", "Warsaw, Poland", "Cleveland, Ohio, USA"),
 
-  logo_url = c("assets/copenhagen.png", "assets/emory.png", "assets/gemelli.jfif.png", "assets/michigan.png", "assets/karolinska.png", "assets/lund.png", "assets/mskcc.png", "assets/martini.png", "assets/radbound.png", "assets/sanraf.png", "assets/uhn.jpg", "assets/Uni-Bonn.png", "assets/chicago.png", "assets/ucla.png", "assets/ucsf.png", "assets/ucl.png", "assets/ku.png", "assets/france.jpg", "assets/oxford.png", "assets/vienna.jpg", "assets/vanderbilt.jpg", "assets/yale.png", "assets/georgetown.jpg", "assets/brisbane.png", "assets/leuven.png", "assets/alfred.jpg", "assets/amsterdam.png", "assets/sancarlos.JPG", "assets/turku.png", "assets/monash.png", "assets/zurich.jpg", "assets/barts.jpg", "assets/nw.jpg", "assets/ur.png", "assets/uci.jpg", "assets/padua.jpg", "assets/dkfz.png", "assets/erasmus.png", "assets/hcb.png", "assets/cmkp.png", "assets/cleavelandclinic.jpg")
-)
+  logo_url = c("assets/copenhagen.png", "assets/emory.png", "assets/gemelli.jfif.png", "assets/michigan.png", "assets/karolinska.png", "assets/lund.png", "assets/mskcc.png", "assets/weilcornell.png", "assets/martini.png", "assets/radbound.png", "assets/sanraf.png", "assets/uhn.jpg", "assets/Uni-Bonn.png", "assets/chicago.png", "assets/ucla.png", "assets/ucsf.png", "assets/ucl.png", "assets/ku.png", "assets/france.jpg", "assets/oxford.png", "assets/vienna.jpg", "assets/vanderbilt.jpg", "assets/yale.png", "assets/georgetown.jpg", "assets/brisbane.png", "assets/leuven.png", "assets/alfred.jpg", "assets/amsterdam.png", "assets/sancarlos.JPG", "assets/turku.png", "assets/monash.png", "assets/zurich.jpg", "assets/barts.jpg", "assets/nw.jpg", "assets/ur.png", "assets/uci.jpg", "assets/padua.jpg", "assets/dkfz.png", "assets/erasmus.png", "assets/hcb.png", "assets/cmkp.png", "assets/cleavelandclinic.jpg"),
 
-# Geocode locations with full results, suppressing progress bars
-coords <- suppressMessages(
-  suppressWarnings(
-    nominatimlite::geo_lite(universities$location, full_results = TRUE)
-  )
-)
+  lat = c(55.6761, 33.7490, 41.9028, 42.2808, 59.3293,
+          55.7047, 40.7128, 40.7645, 53.5511, 51.8126, 45.4642,
+          43.6532, 50.7374, 41.8781, 34.0522, 37.7749, 51.5074,
+          39.0997, 50.6292, 51.7520, 48.2082, 36.1627, 41.3083,
+          38.9072, -27.4698, 50.8798, -37.8136, 52.3676, 40.4168,
+          60.4518, -37.9105, 47.3769, 51.5180, 41.2043, 25.7617,
+          33.6846, 45.4064, 49.3988, 51.9244, 41.3851, 52.2297,
+          41.4993),
 
-# Join geocoded results back to the original data
-universities_geo <- dplyr::left_join(universities, coords, by = c("location" = "query"))
+  lon = c(12.5683, -84.3880, 12.4964, -83.7430, 18.0686,
+          13.1910, -74.0060, -73.9542, 9.9937, 5.8372, 9.1900,
+          -79.3832, 7.0982, -87.6298, -118.2437, -122.4194, -0.1278,
+          -94.5786, 3.0573, -1.2577, 16.3738, -86.7816, -72.9279,
+          -77.0369, 153.0251, 4.7005, 144.9631, 4.9041, -3.7038,
+          22.2666, 145.1362, 8.5417, -0.0610, -73.7271, -80.1918,
+          -117.8265, 11.8768, 8.6724, 4.4777, 2.1734, 21.0122,
+          -81.6944)
+)
 ```
 
 
