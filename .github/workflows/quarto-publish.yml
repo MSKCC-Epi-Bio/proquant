@@ -48,10 +48,19 @@ jobs:
           libsqlite3-dev \
           libmagick++-dev
           
-      - name: Install terra
+      - name: Install System Dependencies for 'terra'
         run: |
-        Rscript -e 'install.packages("terra")'
+          sudo apt-get update
+          sudo apt-get install -y libgdal-dev libgeos-dev libproj-dev
 
+      - name: Install R Dependencies
+        uses: r-lib/actions/setup-r-dependencies@v2
+        with:
+          packages: |
+            any::terra
+            any::rmarkdown
+
+        
       - name: Install R dependencies
         run: |
           lib <- Sys.getenv("R_LIBS_USER")
