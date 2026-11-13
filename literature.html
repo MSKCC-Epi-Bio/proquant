@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.38">
+<meta name="generator" content="quarto-1.11.9">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -12,10 +12,13 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -32,14 +35,15 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/clipboard/clipboard.min.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/scrollable-regions/scrollable-regions.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-6eba6ba83b4f5fbebb32bc0a0d298c6a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-1bdfae85bbdb2f3324ffc3c8d89a3266.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "language": {
     "search-no-results-text": "No results",
@@ -60,17 +64,17 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-sidebar docked quarto-light">
+<body class="nav-sidebar docked quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a>
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav">
+  <nav class="quarto-secondary-nav" aria-label="Toolbar">
     <div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./literature.html">Peer-Reviewed Literature</a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <nav class="quarto-page-breadcrumbs" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./literature.html">Peer-Reviewed Literature</a></li></ol></nav>
+        <a class="flex-grow-1" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
   </nav>
@@ -78,7 +82,7 @@ ul.task-list li input[type="checkbox"] {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto" aria-label="Site">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
       <a href="./index.html" class="sidebar-logo-link">
       <img src="./assets/proquant.png" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none">
@@ -117,21 +121,22 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
+        <nav id="TOC" role="doc-toc" aria-labelledby="toc-title" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
   <ul>
   <li><a href="#editorial-about-proquant" id="toc-editorial-about-proquant" class="nav-link active" data-scroll-target="#editorial-about-proquant">Editorial: About ProQuant</a></li>
-  <li><a href="#editorial-replace-gleason-with-pattern-4-quantification" id="toc-editorial-replace-gleason-with-pattern-4-quantification" class="nav-link" data-scroll-target="#editorial-replace-gleason-with-pattern-4-quantification">Editorial: Replace Gleason with pattern 4 quantification</a></li>
-  <li><a href="#pattern-4-quantification-is-highly-prognostic" id="toc-pattern-4-quantification-is-highly-prognostic" class="nav-link" data-scroll-target="#pattern-4-quantification-is-highly-prognostic">Pattern 4 Quantification is highly prognostic</a></li>
+  <li><a href="#key-papers-demonstrating-prognostic-value-of-pattern-4-quantification" id="toc-key-papers-demonstrating-prognostic-value-of-pattern-4-quantification" class="nav-link" data-scroll-target="#key-papers-demonstrating-prognostic-value-of-pattern-4-quantification">Key papers demonstrating prognostic value of pattern 4 quantification</a></li>
+  <li><a href="#other-papers-evaluating-prognostic-value-of-pattern-4-quantification" id="toc-other-papers-evaluating-prognostic-value-of-pattern-4-quantification" class="nav-link" data-scroll-target="#other-papers-evaluating-prognostic-value-of-pattern-4-quantification">Other papers evaluating prognostic value of pattern 4 quantification</a></li>
   <li><a href="#findings-best-explained-by-pattern-4-volume-being-prognostic" id="toc-findings-best-explained-by-pattern-4-volume-being-prognostic" class="nav-link" data-scroll-target="#findings-best-explained-by-pattern-4-volume-being-prognostic">Findings best explained by pattern 4 volume being prognostic</a></li>
+  <li><a href="#amount-of-pattern-3-not-predictive" id="toc-amount-of-pattern-3-not-predictive" class="nav-link" data-scroll-target="#amount-of-pattern-3-not-predictive">Amount of Pattern 3 Not Predictive</a></li>
   <li><a href="#variation-in-pattern-4-quantification" id="toc-variation-in-pattern-4-quantification" class="nav-link" data-scroll-target="#variation-in-pattern-4-quantification">Variation in Pattern 4 Quantification</a></li>
-  <li><a href="#pattern-3-not-predictive-when-pattern-4-known" id="toc-pattern-3-not-predictive-when-pattern-4-known" class="nav-link" data-scroll-target="#pattern-3-not-predictive-when-pattern-4-known">Pattern 3 Not Predictive When Pattern 4 Known</a></li>
+  <li><a href="#review-papers" id="toc-review-papers" class="nav-link" data-scroll-target="#review-papers">Review papers</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content" tabindex="-1"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
@@ -142,53 +147,74 @@ ul.task-list li input[type="checkbox"] {
 <section id="editorial-about-proquant" class="level3">
 <h3 class="anchored" data-anchor-id="editorial-about-proquant">Editorial: About ProQuant</h3>
 <ul>
-<li><a href="https://pubmed.ncbi.nlm.nih.gov/41419390/" target="_blank">Evaluating Tumor Quantification in Place of Proportions in Prostate Cancer: Principles of the ProQuant Group</a> <br><span style="font-size:0.95em;">Vickers AJ, Fine S; ProQuant Group. Evaluating Tumor Quantification in Place of Proportions in Prostate Cancer: Principles of the ProQuant Group. Eur Urol. 2025 Dec 18:S0302-2838(25)04835-3. doi: 10.1016/j.eururo.2025.11.013. Epub ahead of print. PMID: 41419390.</span></li>
+<li><a href="https://pubmed.ncbi.nlm.nih.gov/41419390/" target="_blank">An editorial giving an overview of the rationale for pattern 4 quantification</a> <br><span style="font-size:0.95em;">Vickers AJ, Fine S; ProQuant Group. Evaluating Tumor Quantification in Place of Proportions in Prostate Cancer: Principles of the ProQuant Group. Eur Urol. 2025 Dec 18:S0302-2838(25)04835-3. doi: 10.1016/j.eururo.2025.11.013. Epub ahead of print. PMID: 41419390.</span></li>
 </ul>
 </section>
-<section id="editorial-replace-gleason-with-pattern-4-quantification" class="level3">
-<h3 class="anchored" data-anchor-id="editorial-replace-gleason-with-pattern-4-quantification">Editorial: Replace Gleason with pattern 4 quantification</h3>
+<section id="key-papers-demonstrating-prognostic-value-of-pattern-4-quantification" class="level3">
+<h3 class="anchored" data-anchor-id="key-papers-demonstrating-prognostic-value-of-pattern-4-quantification">Key papers demonstrating prognostic value of pattern 4 quantification</h3>
 <ul>
-<li><a href="https://pubmed.ncbi.nlm.nih.gov/32304682/" target="_blank">Replacing the Gleason score with pattern 4 quantification</a> <br><span style="font-size:0.95em;">Vickers AJ, Fine SW. Three Things About Gleason Grading That Just About Everyone Believes But That Are Almost Certainly Wrong. Urology. 2020 Sep;143:16-19. doi: 10.1016/j.urology.2020.03.042. Epub 2020 Apr 15. PMID: 32304682.</span></li>
+<li><p><a href="https://pubmed.ncbi.nlm.nih.gov/40774801" target="_blank">Pattern 4 quantification of biopsy cores is superior to Gleason score and multivariable models for predicting distant metastasis after radical prostatectomy in patients with biopsy grade group 2 - 4</a><br><span style="font-size:0.95em;">Olivier J, Vertosick E, Delobel L, Bommelaere T, Puech P, Leroy X, Vickers A, Villers A. Quantification of prostate cancer Gleason pattern 4 to predict oncological outcome. BJU Int. 2025 Aug 7. doi: 10.1111/bju.16884. PMID: 40774801.</span></p></li>
+<li><p><a href="https://pubmed.ncbi.nlm.nih.gov/41867176/" target="_blank">In patients with biopsy grade group 2 – 4 undergoing radical prostatectomy, mm of pattern 4 on biopsy better predictor of advanced surgical pathology and biochemical recurrence than either grade group or a multivariable model of standard clinical predictors</a><br><span style="font-size:0.95em;">Pickersgill NA, Fletcher SA, Aiken N, Assel MJ, Liso N, Reuter VE, Vickers AJ, Ehdaie B, Fine SW. Total Gleason Pattern 4 Length Outperforms Grade Group and Clinical Models in Predicting Oncologic Outcomes in Grade Group 2-4 Prostate Cancer. medRxiv [Preprint]. 2026 Mar 2:2026.02.27.26347289. doi: 10.64898/2026.02.27.26347289. PMID: 41867176; PMCID: PMC13001378.</span></p></li>
+<li><p><a href="https://pubmed.ncbi.nlm.nih.gov/42830647/" target="_blank">Patients with grade group 2 – 4 with &lt;2mm of pattern 4 on biopsy have equivalent risk to those in the favorable intermediate risk category - and hence are eligible for active surveillance – but constitute a group that is twice as large</a><br><span style="font-size:0.95em;">Fletcher SA, Pickersgill NA, Aiken N, Assel MJ, Liso N, Reuter VE, Ehdaie B, Fine SW, Vickers AJ. Gleason pattern 4 length and active surveillance eligibility in Grade Group 2-4 prostate cancer. BJU Int. 2026 Oct 4. doi: 10.1111/bju.70478. Epub ahead of print. PMID: 42830647.</span></p></li>
+<li><p><a href="https://pubmed.ncbi.nlm.nih.gov/30076908/" target="_blank">In patients with grade group 2 prostate cancer, length of pattern 4 in biopsy cores predicts risk of adverse pathology at surgery (often considered to be the first high-quality paper to examine pattern 4 quantification)</a> <br><span style="font-size:0.95em;">Dean LW, Assel M, Sjoberg DD, et al.&nbsp;Clinical Usefulness of Total Length of Gleason Pattern 4 on Biopsy in Men with Grade Group 2 Prostate Cancer. J Urol. 2019;202(2):309-316. doi:10.1016/j.juro.2018.07.062</span></p></li>
+<li><p><a href="https://pubmed.ncbi.nlm.nih.gov/34955242/" target="_blank">In a large radiotherapy cohort of grade group 2 and 3 patients, strongest predictor of distant progression and prostate cancer-specific mortality was percentage of biopsy tissue that was pattern 4, equivalent to mm pattern 4 adjusted for number of cores</a> <br><span style="font-size:0.95em;">Delahunt B, Steigler A, Atkinson C, Christie D, Duchesne G, Egevad L, Joseph D, Kenwright DN, Matthews J, Murray JD, Oldmeadow C, Samaratunga H, Spry NA, Thunders MC, Hondermarck H, Denham JW. Percentage grade 4 tumour predicts outcome for prostate adenocarcinoma in needle biopsies from patients with advanced disease: 10-year data from the TROG 03.04 RADAR trial. Pathology. 2022 Feb;54(1):49-54. doi: 10.1016/j.pathol.2021.11.004. Epub 2021 Dec 24. PMID: 34955242.</span></p></li>
 </ul>
 </section>
-<section id="pattern-4-quantification-is-highly-prognostic" class="level3">
-<h3 class="anchored" data-anchor-id="pattern-4-quantification-is-highly-prognostic">Pattern 4 Quantification is highly prognostic</h3>
+<section id="other-papers-evaluating-prognostic-value-of-pattern-4-quantification" class="level3">
+<h3 class="anchored" data-anchor-id="other-papers-evaluating-prognostic-value-of-pattern-4-quantification">Other papers evaluating prognostic value of pattern 4 quantification</h3>
 <ul>
-<li><p><a href="https://pubmed.ncbi.nlm.nih.gov/30076908/" target="_blank">Length of pattern 4 predicts adverse surgical pathology in men with grade group 2 prostate cancer</a> <br><span style="font-size:0.95em;">Dean LW, Assel M, Sjoberg DD, et al.&nbsp;Clinical Usefulness of Total Length of Gleason Pattern 4 on Biopsy in Men with Grade Group 2 Prostate Cancer. J Urol. 2019;202(2):309-316. doi:10.1016/j.juro.2018.07.062</span></p></li>
-<li><p><a href="https://pubmed.ncbi.nlm.nih.gov/35363038/" target="_blank">Length of pattern 4 predicts biochemical recurrence in men with grade group 2 prostate cancer</a> <br><span style="font-size:0.95em;">Perera M, Assel MJ, Benfante NE, et al.&nbsp;Oncologic Outcomes of Total Length Gleason Pattern 4 on Biopsy in Men with Grade Group 2 Prostate Cancer. J Urol. 2022;208(2):309-316. doi:10.1097/JU.0000000000002685</span></p></li>
-<li><p><a href="https://pubmed.ncbi.nlm.nih.gov/39260095/" target="_blank">Pattern 4 in men on active surveillance: upgrading is questionable endpoint</a> <br><span style="font-size:0.95em;">Perera M, Assel M, Nalavenkata S, Khaleel S, Benfante N, Carlsson SV, Reuter VE, Laudone VP, Scardino PT, Touijer KA, Eastham JA, Vickers AJ, Fine SW, Ehdaie B. Quantification of Gleason Pattern 4 Metrics Identifies Pathologic Progression in Patients With Grade Group 2 Prostate Cancer on Active Surveillance. Clin Genitourin Cancer. 2024 Dec;22(6):102204. doi: 10.1016/j.clgc.2024.102204. Epub 2024 Aug 14. PMID: 39260095.</span></p></li>
-<li><p><a href="https://pubmed.ncbi.nlm.nih.gov/35987380/" target="_blank">Pattern 4 volume best predictor of PSA</a> <br><span style="font-size:0.95em;">Andolfi C, Vickers AJ, Cooperberg MR, Carroll PR, Cowan JE, Paner GP, Helfand BT, Liauw SL, Eggener SE. Blood Prostate-specific Antigen by Volume of Benign, Gleason Pattern 3 and 4 Prostate Tissue. Urology. 2022 Dec;170:154-160. doi: 10.1016/j.urology.2022.08.014. Epub 2022 Aug 17. PMID: 35987380; PMCID: PMC10515713.</span></p></li>
-<li><p><a href="https://pubmed.ncbi.nlm.nih.gov/39977387/" target="_blank">Pattern 4 volume best predictor of advanced pathologic stage</a> <br><span style="font-size:0.95em;">Scuderi S, Tin AL, Klug J, et al.&nbsp;The Absolute Volume of Gleason Pattern 4 on Radical Prostatectomy Is More Strongly Associated With Advanced Stage and Biochemical Recurrence Than Gleason Grade Groups. J Urol. 2024. doi:10.1097/JU.0000000000004484</span></p></li>
-<li><p><a href="https://pubmed.ncbi.nlm.nih.gov/32171650/" target="_blank">Pattern 4 and 5 volume best predictor of distant metastasis</a> <br><span style="font-size:0.95em;">Thomas Bommelaere, Arnauld Villers, Philippe Puech, Guillaume Ploussard, Julien Labreuche, Elodie Drumez, Xavier Leroy, Jonathan Olivier, Risk Estimation of Metastatic Recurrence After Prostatectomy: A Model Using Preoperative Magnetic Resonance Imaging and Targeted Biopsy, European Urology Open Science,2022,https://doi.org/10.1016/j.euros.2022.04.011.</span></p></li>
-<li><p><a href="https://pubmed.ncbi.nlm.nih.gov/40774801" target="_blank">Pattern 4 quantification superior to Gleason score and multivariable models for predicting distant metastasis</a><br><span style="font-size:0.95em;">Olivier J, Vertosick E, Delobel L, Bommelaere T, Puech P, Leroy X, Vickers A, Villers A. Quantification of prostate cancer Gleason pattern 4 to predict oncological outcome. BJU Int. 2025 Aug 7. doi: 10.1111/bju.16884. PMID: 40774801.</span></p></li>
+<li><p><a href="https://pubmed.ncbi.nlm.nih.gov/35813259/" target="_blank">Pattern 4 and 5 volume in biopsy cores best predictor of distant metastasis in patients with grade group 1 to 5 treated with radical prostatectomy</a> <br><span style="font-size:0.95em;">Bommelaere T, Villers A, Puech P, Ploussard G, Labreuche J, Drumez E, Leroy X, Olivier J. Risk Estimation of Metastatic Recurrence After Prostatectomy: A Model Using Preoperative Magnetic Resonance Imaging and Targeted Biopsy. Eur Urol Open Sci. 2022 May 19;41:24-34. doi: 10.1016/j.euros.2022.04.011. PMID: 35813259; PMCID: PMC9257652.</span></p></li>
+<li><p><a href="https://pubmed.ncbi.nlm.nih.gov/16935413/" target="_blank">Length of pattern 4 and 5 in biopsy only predictor of clinical progression after radical prostatectomy in patients with grade group 1 to 5</a> <br><span style="font-size:0.95em;">Vis AN, Roemeling S, Kranse R, Schröder FH, van der Kwast TH. Should we replace the Gleason score with the amount of high-grade prostate cancer? Eur Urol. 2007 Apr;51(4):931-9. doi: 10.1016/j.eururo.2006.07.051. Epub 2006 Aug 15. PMID: 16935413.</span></p></li>
+<li><p><a href="https://pubmed.ncbi.nlm.nih.gov/35363038/" target="_blank">Length of pattern 4 on biopsy predicts biochemical recurrence in men with grade group 2 prostate cancer, although sample size was moderate, and differences were not shown between mm and percentage pattern 4</a> <br><span style="font-size:0.95em;">Perera M, Assel MJ, Benfante NE, et al.&nbsp;Oncologic Outcomes of Total Length Gleason Pattern 4 on Biopsy in Men with Grade Group 2 Prostate Cancer. J Urol. 2022;208(2):309-316. doi:10.1097/JU.0000000000002685</span></p></li>
+<li><p><a href="https://pubmed.ncbi.nlm.nih.gov/39260095/" target="_blank">During active surveillance for patients with grade group 2, changes in amount of pattern 4 often poorly correlated with upgrading</a> <br><span style="font-size:0.95em;">Perera M, Assel M, Nalavenkata S, Khaleel S, Benfante N, Carlsson SV, Reuter VE, Laudone VP, Scardino PT, Touijer KA, Eastham JA, Vickers AJ, Fine SW, Ehdaie B. Quantification of Gleason Pattern 4 Metrics Identifies Pathologic Progression in Patients With Grade Group 2 Prostate Cancer on Active Surveillance. Clin Genitourin Cancer. 2024 Dec;22(6):102204. doi: 10.1016/j.clgc.2024.102204. Epub 2024 Aug 14. PMID: 39260095.</span></p></li>
+<li><p><a href="https://pubmed.ncbi.nlm.nih.gov/41964720/" target="_blank">In a small study of 94 patients, mm of pattern 4 on biopsy a better predictor or biochemical recurrence than percentage pattern 4 in patients undergoing radical prostatectomy with biopsy grade group 2 - 4</a> <br><span style="font-size:0.95em;">Belisario YMG, Hollemans E, van Leenders GJLH. Comparison of biopsy gleason pattern 4 percentage and length in grade group 2 prostate cancer patients. Virchows Arch. 2026 Apr 11. doi: 10.1007/s00428-026-04515-0. Epub ahead of print. PMID: 41964720.</span></p></li>
+<li><p><a href="https://pubmed.ncbi.nlm.nih.gov/42594716/" target="_blank">mm of pattern 4 strong predictor of recurrence in patients undergoing radical prostatectomy with biopsy grade group 2 - 4</a> <br><span style="font-size:0.95em;">Karanikolas T, Freedman A, Tripp J, Yim S, Joseph M, Maria P, Aboumohamed A, Sankin A, Agalliu I, Reese S, Watts K. Biopsy Gleason pattern 4 burden refines preoperative risk stratification in prostate cancer. Urol Oncol. 2026 Oct;44(10):575-584. doi: 10.1016/j.urolonc.2026.07.013. Epub 2026 Aug 13. PMID: 42594716.</span></p></li>
+<li><p><a href="https://pubmed.ncbi.nlm.nih.gov/35987380/" target="_blank">PSA is driven by pattern 4 volume: a comparison of benign, pattern 3 and pattern 4 volumes in radical prostatectomy specimens</a> <br><span style="font-size:0.95em;">Andolfi C, Vickers AJ, Cooperberg MR, Carroll PR, Cowan JE, Paner GP, Helfand BT, Liauw SL, Eggener SE. Blood Prostate-specific Antigen by Volume of Benign, Gleason Pattern 3 and 4 Prostate Tissue. Urology. 2022 Dec;170:154-160. doi: 10.1016/j.urology.2022.08.014. Epub 2022 Aug 17. PMID: 35987380; PMCID: PMC10515713.</span></p></li>
+<li><p><a href="https://pubmed.ncbi.nlm.nih.gov/39977387/" target="_blank">Pattern 4 volume in radical prostatectomy specimen more strongly associated with locally advanced disease and biochemical recurrence than grade group or percentage pattern 4</a> <br><span style="font-size:0.95em;">Scuderi S, Tin AL, Klug J, et al.&nbsp;The Absolute Volume of Gleason Pattern 4 on Radical Prostatectomy Is More Strongly Associated With Advanced Stage and Biochemical Recurrence Than Gleason Grade Groups. J Urol. 2024. doi:10.1097/JU.0000000000004484</span></p></li>
+<li><p><a href="https://pubmed.ncbi.nlm.nih.gov/38001723/" target="_blank">Small paper (n=123) with problematic endpoint (advanced pathology which included grade group 4)</a> <br><span style="font-size:0.95em;">Kamecki H, Mielczarek Ł, Szempliński S, Dębowska M, Rajwa P, Baboudjian M, Klemm J, Rivas JG, Modzelewska E, Tayara O, Malewski W, Szostek P, Poletajew S, Kryst P, Sosnowski R, Nyk Ł. Quantification of Gleason Pattern 4 at MRI-Guided Biopsy to Predict Adverse Pathology at Radical Prostatectomy in Intermediate-Risk Prostate Cancer Patients. Cancers (Basel). 2023 Nov 17;15(22):5462. doi: 10.3390/cancers15225462. PMID: 38001723; PMCID: PMC10670701.</span></p></li>
+<li><p><a href="https://pubmed.ncbi.nlm.nih.gov/41293883/" target="_blank">Pattern 4 quantification a moderate predictor for metastasis-free survival in men with biopsy grade group 1 to 5 in the ERSPC randomized trial; results were potentially weakened by using longest core of pattern 4 rather than total pattern 4 burden as the predictor</a> <br><span style="font-size:0.95em;">Kroon LJ, Remmers S, de Vos II, Kweldam CF, Rijstenberg LL, van den Bergh RCN, Roobol MJ, van Leenders GJLH. Rethinking Gleason pattern quantification in predicting metastasis: results of 20 years of follow-up in the Rotterdam section of the European Randomized Study of Screening for Prostate Cancer. Histopathology. 2026 Mar;88(4):881-888. doi: 10.1111/his.70052. Epub 2025 Nov 26. PMID: 41293883; PMCID: PMC12891930.</span></p></li>
+<li><p><a href="https://pubmed.ncbi.nlm.nih.gov/36897217/" target="_blank">Pattern 4 length not a good predictor of adverse pathology in patients with biopsy grade group 1 or 2 treated by radical prostatectomy, but only 61 patients with grade group 2 included and adverse pathology definition included grade group, entailing a circular argument</a> <br><span style="font-size:0.95em;">Ordner J, Flaifel A, Serrano A, Graziano R, Melamed J, Deng FM. Significance of the Percentage of Gleason Pattern 4 at Prostate Biopsy in Predicting Adverse Pathology on Radical Prostatectomy: Application in Active Surveillance. Am J Clin Pathol. 2023 Jul 5;160(1):35-40. doi: 10.1093/ajcp/aqad005. PMID: 36897217.</span></p></li>
+<li><p><a href="https://pubmed.ncbi.nlm.nih.gov/32997878/" target="_blank">In surgery patients with biopsy grade group 2, there is a greater risk of advanced pathology in patients with higher mm of pattern 4, but small sample size and limited statistical analysis focusing on cut-points precludes further conclusions</a> <br><span style="font-size:0.95em;">Sato S, Kimura T, Onuma H, Fukuda Y, Egawa S, Takahashi H. Combination of total length of Gleason pattern 4 and number of Gleason score 3 + 4 = 7 cores detects similar outcome group to Gleason score 6 cancers among cases with ≥5% of Gleason pattern 4. Pathol Int. 2020 Dec;70(12):992-998. doi: 10.1111/pin.13026. Epub 2020 Sep 30. PMID: 32997878.</span></p></li>
+<li><p><a href="https://pubmed.ncbi.nlm.nih.gov/36816145/" target="_blank">In surgery patients with grade group 2, only highest percentage of pattern 4 and not tumor length predicts advanced pathology, but endpoint definition included grade group, entailing a circular argument</a> <br><span style="font-size:0.95em;">Sato S, Kimura T, Onuma H, Egawa S, Shimoda M, Takahashi H. The highest percentage of Gleason Pattern 4 is a predictor in intermediate-risk prostate cancer. BJUI Compass. 2022 Oct 17;4(2):234-240. doi: 10.1002/bco2.195. PMID: 36816145; PMCID: PMC9931537.</span></p></li>
 </ul>
-<hr>
 </section>
 <section id="findings-best-explained-by-pattern-4-volume-being-prognostic" class="level3">
 <h3 class="anchored" data-anchor-id="findings-best-explained-by-pattern-4-volume-being-prognostic">Findings best explained by pattern 4 volume being prognostic</h3>
 <ul>
-<li><p><a href="https://pubmed.ncbi.nlm.nih.gov/39470422/" target="_blank">Tumor volume assessed on MRI prognostic</a> <br><span style="font-size:0.95em;">Yang DD, Lee LK, Tsui JMG, Leeman JE, McClure HM, Sudhyadhom A, Guthier CV, Taplin ME, Trinh QD, Mouw KW, Martin NE, Orio PF, Nguyen PL, D’Amico AV, Shin KY, Lee KN, King MT. AI-derived Tumor Volume from Multiparametric MRI and Outcomes in Localized Prostate Cancer. Radiology. 2024 Oct;313(1):e240041. doi: 10.1148/radiol.240041. PMID: 39470422.</span></p></li>
-<li><p><a href="https://pubmed.ncbi.nlm.nih.gov/25913389/" target="_blank">Clinical low risk cancer at low risk of recurrence even if upgraded at radical prostatectomy</a><br><span style="font-size:0.95em;">Imnadze M, Sjoberg DD, Vickers AJ. Adverse Pathologic Features at Radical Prostatectomy: Effect of Preoperative Risk on Oncologic Outcomes. Eur Urol. 2016 Jan;69(1):143-8. doi: 10.1016/j.eururo.2015.03.044. Epub 2015 Apr 23. PMID: 25913389; PMCID: PMC4618775.</span></p></li>
-<li><p><a href="https://pubmed.ncbi.nlm.nih.gov/29802773/" target="_blank">Clinical low risk cancer at low risk of metastasis even if upgraded at radical prostatectomy</a><br><span style="font-size:0.95em;">Kovac E, Vertosick EA, Sjoberg DD, Vickers AJ, Stephenson AJ. Effects of pathological upstaging or upgrading on metastasis and cancer-specific mortality in men with clinical low-risk prostate cancer. BJU Int. 2018 Dec;122(6):1003-1009. doi: 10.1111/bju.14418. Epub 2018 Jun 22. PMID: 29802773; PMCID: PMC6737926. </span></p></li>
-<li><p><a href="https://pubmed.ncbi.nlm.nih.gov/34294510/" target="_blank">MRI finds tumors in men with negative biopsy that are not aggressive</a> <br><span style="font-size:0.95em;">Vickers AJ. Effects of Magnetic Resonance Imaging Targeting on Overdiagnosis and Overtreatment of Prostate Cancer. Eur Urol. 2021 Nov;80(5):567-572. doi: 10.1016/j.eururo.2021.06.026. Epub 2021 Jul 20. Erratum in: Eur Urol. 2022 Sep;82(3):e89. doi: 10.1016/j.eururo.2022.05.022. PMID: 34294510; PMCID: PMC8530856.</span></p></li>
+<li><p><a href="https://pubmed.ncbi.nlm.nih.gov/39470422/" target="_blank">Tumor volume assessed on MRI predicts 7-year risk of metastasis after surgery or radiotherapy (MRI volume reflects amount of pattern 4)</a> <br><span style="font-size:0.95em;">Yang DD, Lee LK, Tsui JMG, Leeman JE, McClure HM, Sudhyadhom A, Guthier CV, Taplin ME, Trinh QD, Mouw KW, Martin NE, Orio PF, Nguyen PL, D’Amico AV, Shin KY, Lee KN, King MT. AI-derived Tumor Volume from Multiparametric MRI and Outcomes in Localized Prostate Cancer. Radiology. 2024 Oct;313(1):e240041. doi: 10.1148/radiol.240041. PMID: 39470422.</span></p></li>
+<li><p>Numerous papers have found if grade is discordant between settings (e.g.&nbsp;targeted and systematic biopsy, or between biopsy and surgical pathology), risk is intermediate between the two grades. This is best explained in terms of pattern 4 volume. The larger the tumor (and hence for a given Gleason score, the larger the amount of pattern 4), the more likely sampling will be adequate and the less likely it is to find discordant Gleason scores</p>
+<ul>
+<li><p><a href="https://pubmed.ncbi.nlm.nih.gov/25913389/" target="_blank">Clinical low risk cancer at low risk of recurrence even if upgraded at radical prostatectomy</a> <br><span style="font-size:0.95em;">Imnadze M, Sjoberg DD, Vickers AJ. Adverse Pathologic Features at Radical Prostatectomy: Effect of Preoperative Risk on Oncologic Outcomes. Eur Urol. 2016 Jan;69(1):143-8. doi: 10.1016/j.eururo.2015.03.044. Epub 2015 Apr 23. PMID: 25913389; PMCID: PMC4618775.</span></p></li>
+<li><p><a href="https://pubmed.ncbi.nlm.nih.gov/29802773/" target="_blank">Clinical low risk cancer at low risk of metastasis even if upgraded at radical prostatectomy</a> <br><span style="font-size:0.95em;">Kovac E, Vertosick EA, Sjoberg DD, Vickers AJ, Stephenson AJ. Effects of pathological upstaging or upgrading on metastasis and cancer-specific mortality in men with clinical low-risk prostate cancer. BJU Int. 2018 Dec;122(6):1003-1009. doi: 10.1111/bju.14418. Epub 2018 Jun 22. PMID: 29802773; PMCID: PMC6737926.</span></p></li>
 <li><p><a href="https://pubmed.ncbi.nlm.nih.gov/37739916/" target="_blank">Risk is intermediate when biopsy and pathologic grade group are discordant</a> <br><span style="font-size:0.95em;">Scuderi S, Pellegrino F, Tin A, Beech BB, Gandaglia G, Stabile A, Eastham JA, Montorsi F, Briganti A, Vickers AJ. The Highest Grade Group Does Not Drive the Risk of Recurrence when Systematic and Multiparametric Magnetic Resonance Imaging (MRI)-targeted Biopsies are Discordant: Preliminary Findings Using Radical Prostatectomy Pathology as a Surrogate for MRI-targeted Biopsy Grade. Eur Urol Focus. 2024 May;10(3):486-488. doi: 10.1016/j.euf.2023.07.011. Epub 2023 Sep 20. PMID: 37739916; PMCID: PMC10950835.</span></p></li>
-<li><p><a href="https://pubmed.ncbi.nlm.nih.gov/37584213/" target="_blank">Risk is intermediate when systematic and MRI-targeted grade group are discordant</a><br><span style="font-size:0.95em;">Gaffney CD, Tin AL, Fainberg J, Fine S, Jibara G, Touijer K, Eastham J, Scardino P, Laudone V, Vickers AJ, Ehdaie B. The oncologic risk of magnetic resonance imaging-targeted and systematic cores in patients treated with radical prostatectomy. Cancer. 2023 Dec 1;129(23):3790-3796. doi: 10.1002/cncr.34981. Epub 2023 Aug 16. PMID: 37584213; PMCID: PMC11249356.</span></p></li>
+<li><p><a href="https://pubmed.ncbi.nlm.nih.gov/37584213/" target="_blank">Risk is intermediate when systematic and MRI-targeted grade group are discordant</a> <br><span style="font-size:0.95em;">Gaffney CD, Tin AL, Fainberg J, Fine S, Jibara G, Touijer K, Eastham J, Scardino P, Laudone V, Vickers AJ, Ehdaie B. The oncologic risk of magnetic resonance imaging-targeted and systematic cores in patients treated with radical prostatectomy. Cancer. 2023 Dec 1;129(23):3790-3796. doi: 10.1002/cncr.34981. Epub 2023 Aug 16. PMID: 37584213; PMCID: PMC11249356.</span></p></li>
+<li><p><a href="https://pubmed.ncbi.nlm.nih.gov/34294510/" target="_blank">MRI finds tumors in men with negative biopsy that are not aggressive</a> <br><span style="font-size:0.95em;">Vickers AJ. Effects of Magnetic Resonance Imaging Targeting on Overdiagnosis and Overtreatment of Prostate Cancer. Eur Urol. 2021 Nov;80(5):567-572. doi: 10.1016/j.eururo.2021.06.026. Epub 2021 Jul 20. Erratum in: Eur Urol. 2022 Sep;82(3):e89. doi: 10.1016/j.eururo.2022.05.022. PMID: 34294510; PMCID: PMC8530856.</span></p></li>
+</ul></li>
 </ul>
-<hr>
+</section>
+<section id="amount-of-pattern-3-not-predictive" class="level3">
+<h3 class="anchored" data-anchor-id="amount-of-pattern-3-not-predictive">Amount of Pattern 3 Not Predictive</h3>
+<ul>
+<li><p><a href="https://pubmed.ncbi.nlm.nih.gov/38278665/" target="_blank">Pattern 3 burden non-predictive once amount of pattern 4 is known: reanalysis of two prior papers one looking at biopsy pattern 4 and the other pattern 4 in the surgical specimen</a> <br><span style="font-size:0.95em;">Vickers AJ, Assel M, Cooperberg MR, Fine SW, Eggener S. Amount of Gleason Pattern 3 Is Not Predictive of Risk in Grade Group 2-4 Prostate Cancer. Eur Urol. 2024 Jul;86(1):1-3. doi: 10.1016/j.eururo.2024.01.005. Epub 2024 Jan 25. PMID: 38278665.</span></p></li>
+<li><p><a href="https://pubmed.ncbi.nlm.nih.gov/39977387/" target="_blank">Pattern 3 volume in the surgical specimen does not add to pattern 4 volume to predict advanced pathologic stage or biochemical recurrence</a> <br><span style="font-size:0.95em;">Scuderi S, Tin AL, Klug J, et al.&nbsp;The Absolute Volume of Gleason Pattern 4 on Radical Prostatectomy Is More Strongly Associated With Advanced Stage and Biochemical Recurrence Than Gleason Grade Groups. J Urol. 2024. doi:10.1097/JU.0000000000004484</span></p></li>
+<li><p><a href="https://pubmed.ncbi.nlm.nih.gov/40774801/" target="_blank">Once amount of pattern 4 is known, amount of pattern 3 in the biopsy does not help predict recurrence or distant metastasis after radical prostatectomy in patients with biopsy grade group 2 - 4</a> <br><span style="font-size:0.95em;">Olivier J, Vertosick E, Delobel L, Bommelaere T, Puech P, Leroy X, Vickers A, Villers A. Quantification of prostate cancer Gleason pattern 4 to predict oncological outcome. BJU Int. 2025 Aug 7. doi: 10.1111/bju.16884. PMID: 40774801</span></p></li>
+<li><p><a href="https://pubmed.ncbi.nlm.nih.gov/41867176/" target="_blank">In patients with biopsy grade group 2 – 4 undergoing radical prostatectomy, mm of pattern 3 does not add predictiveness to mm of pattern 4</a> <br><span style="font-size:0.95em;">Pickersgill NA, Fletcher SA, Aiken N, Assel MJ, Liso N, Reuter VE, Vickers AJ, Ehdaie B, Fine SW. Total Gleason Pattern 4 Length Outperforms Grade Group and Clinical Models in Predicting Oncologic Outcomes in Grade Group 2-4 Prostate Cancer. medRxiv [Preprint]. 2026 Mar 2:2026.02.27.26347289. doi: 10.64898/2026.02.27.26347289. PMID: 41867176; PMCID: PMC13001378.</span></p></li>
+<li><p><a href="https://pubmed.ncbi.nlm.nih.gov/41293883/" target="_blank">Amount of pattern 3 in biopsy did not predict metastasis-free survival in men with biopsy grade group 1 – 5 in the ERSPC randomized trial</a> <br><span style="font-size:0.95em;">Kroon LJ, Remmers S, de Vos II, Kweldam CF, Rijstenberg LL, van den Bergh RCN, Roobol MJ, van Leenders GJLH. Rethinking Gleason pattern quantification in predicting metastasis: results of 20 years of follow-up in the Rotterdam section of the European Randomized Study of Screening for Prostate Cancer. Histopathology. 2026 Mar;88(4):881-888. doi: 10.1111/his.70052. Epub 2025 Nov 26. PMID: 41293883; PMCID: PMC12891930.</span></p></li>
+</ul>
 </section>
 <section id="variation-in-pattern-4-quantification" class="level3">
 <h3 class="anchored" data-anchor-id="variation-in-pattern-4-quantification">Variation in Pattern 4 Quantification</h3>
 <ul>
-<li><p><a href="https://pubmed.ncbi.nlm.nih.gov/39610035/" target="_blank">Variability in tumor extent by different pathologists</a><br><span style="font-size:0.95em;">Bernhardt M, Weinhold L, Bremmer F, Chan E, Cheng L, Collins K, Downes M, Greenland N, Hommerding O, Iczkowski KA, Jufe L, Kreft T, van Leenders G, Oxley J, Perry-Keene J, Reis H, Schmid M, Tsuzuki T, Wobker S, Wiliamson SR, Kweldam C, Kristiansen G. Unexpectedly high variability in determining tumour extent in prostatic biopsies: implications for active surveillance. Histopathology. 2025 Mar;86(4):627-639. doi: 10.1111/his.15372. Epub 2024 Nov 28. PMID: 39610035; PMCID: PMC11791730.</span></p></li>
-<li><p><a href="https://pubmed.ncbi.nlm.nih.gov/35987380/" target="_blank">Variability in pattern 4 volume between pathologists at two separate institutions</a><br><span style="font-size:0.95em;">Andolfi C, Vickers AJ, Cooperberg MR, Carroll PR, Cowan JE, Paner GP, Helfand BT, Liauw SL, Eggener SE. Blood Prostate-specific Antigen by Volume of Benign, Gleason Pattern 3 and 4 Prostate Tissue. Urology. 2022 Dec;170:154-160. doi: 10.1016/j.urology.2022.08.014. Epub 2022 Aug 17. PMID: 35987380; PMCID: PMC10515713.</span></p></li>
+<li><p><a href="https://pubmed.ncbi.nlm.nih.gov/39610035/" target="_blank">Variability in tumor extent in biopsy cores evaluated by different pathologists</a> <br><span style="font-size:0.95em;">Bernhardt M, Weinhold L, Bremmer F, Chan E, Cheng L, Collins K, Downes M, Greenland N, Hommerding O, Iczkowski KA, Jufe L, Kreft T, van Leenders G, Oxley J, Perry-Keene J, Reis H, Schmid M, Tsuzuki T, Wobker S, Wiliamson SR, Kweldam C, Kristiansen G. Unexpectedly high variability in determining tumour extent in prostatic biopsies: implications for active surveillance. Histopathology. 2025 Mar;86(4):627-639. doi: 10.1111/his.15372. Epub 2024 Nov 28. PMID: 39610035; PMCID: PMC11791730.</span></p></li>
+<li><p><a href="https://pubmed.ncbi.nlm.nih.gov/35987380/" target="_blank">Variability in pattern 4 volume in the surgical specimen between pathologists at two separate institutions</a> <br><span style="font-size:0.95em;">Andolfi C, Vickers AJ, Cooperberg MR, Carroll PR, Cowan JE, Paner GP, Helfand BT, Liauw SL, Eggener SE. Blood Prostate-specific Antigen by Volume of Benign, Gleason Pattern 3 and 4 Prostate Tissue. Urology. 2022 Dec;170:154-160. doi: 10.1016/j.urology.2022.08.014. Epub 2022 Aug 17. PMID: 35987380; PMCID: PMC10515713.</span></p></li>
+<li><p><a href="https://pubmed.ncbi.nlm.nih.gov/42989998/" target="_blank">Systematically compares different approaches to pattern 4 quantification using machine learning</a> <br><span style="font-size:0.95em;">Buzoianu MM, Yu R, Assel M, Bozkurt A, Aghdam H, Fine SW, Vickers AJ. Comparing Gleason pattern 4 measurement approaches on prostate biopsy using machine learning: a proof-of-principle study. Histopathology. 2026 Nov 6. doi: 10.1111/his.70313. Epub ahead of print. PMID: 42989998.</span></p></li>
 </ul>
-<hr>
 </section>
-<section id="pattern-3-not-predictive-when-pattern-4-known" class="level3">
-<h3 class="anchored" data-anchor-id="pattern-3-not-predictive-when-pattern-4-known">Pattern 3 Not Predictive When Pattern 4 Known</h3>
+<section id="review-papers" class="level3">
+<h3 class="anchored" data-anchor-id="review-papers">Review papers</h3>
 <ul>
-<li><p><a href="https://pubmed.ncbi.nlm.nih.gov/38278665/" target="_blank">Pattern 3 non-predictive of PSA or advanced surgical pathology once pattern 4 is known</a><br><span style="font-size:0.95em;">Vickers AJ, Assel M, Cooperberg MR, Fine SW, Eggener S. Amount of Gleason Pattern 3 Is Not Predictive of Risk in Grade Group 2-4 Prostate Cancer. Eur Urol. 2024 Jul;86(1):1-3. doi: 10.1016/j.eururo.2024.01.005. Epub 2024 Jan 25. PMID: 38278665.</span></p></li>
-<li><p><a href="https://pubmed.ncbi.nlm.nih.gov/39977387/" target="_blank">Pattern 3 volume does not add to pattern 4 volume to predict advanced pathologic stage</a><br><span style="font-size:0.95em;">Scuderi S, Tin AL, Klug J, et al.&nbsp;The Absolute Volume of Gleason Pattern 4 on Radical Prostatectomy Is More Strongly Associated With Advanced Stage and Biochemical Recurrence Than Gleason Grade Groups. J Urol. 2024. doi:10.1097/JU.0000000000004484</span></p></li>
+<li><p><a href="https://pubmed.ncbi.nlm.nih.gov/42888115/" target="_blank">Active Surveillance for Intermediate-risk Prostate Cancer: Implications of AI-enabled Pattern Quantification</a> <br><span style="font-size:0.95em;">Mittmann G, van den Bergh RCN, Fine SW, Vickers AJ, Brinker TJ. Active Surveillance for Intermediate-risk Prostate Cancer: Implications of AI-enabled Pattern Quantification. Eur Urol Focus. 2026 Oct 16:S2405-4569(26)00220-8. doi: 10.1016/j.euf.2026.09.007. Epub ahead of print. PMID: 42888115.</span></p></li>
+<li><p><a href="https://pubmed.ncbi.nlm.nih.gov/40031947/" target="_blank">A systematic review of pattern 4 quantification, including both percentage pattern 4 and absolute pattern 4; includes Dean (2019), Sato (2020), Delahunt (2022), Perera (2022) and Sato (2023) papers all included in this bibliography</a> <br><span style="font-size:0.95em;">Soon MS, Morgan SC, Lavallée LT, Breau RH, Flood TA, Corkum MT. Association of absolute amount of pattern 4 disease on prostate biopsy with oncologic outcomes in intermediate-risk prostate cancer A systematic review. Can Urol Assoc J. 2025 Jun;19(6):211-216. doi: 10.5489/cuaj.8995. PMID: 40031947; PMCID: PMC12158451.</span></p></li>
 </ul>
 
 
@@ -273,7 +299,8 @@ ul.task-list li input[type="checkbox"] {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
       // Inspect non-navigation links and adorn them if external
-     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      window.quartoDecorateExternalLinks = function (root) {
+     var links = (root || window.document).querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
       for (var i=0; i<links.length; i++) {
         const link = links[i];
         if (!isInternal(link.href)) {
@@ -282,8 +309,69 @@ ul.task-list li input[type="checkbox"] {
           if (link.dataset.originalHref !== undefined) {
             link.href = link.dataset.originalHref;
           }
+          if (!link.classList.contains('no-external-icon')) {
+          }
         }
       }
+      };
+      window.quartoDecorateExternalLinks(window.document);
+    // Esc closes the popup (WCAG 1.4.13) and focus leaving both trigger and
+    // popup closes it (WCAG 2.4.11); tippy handles neither for interactive popups.
+    const hideOnEscAndFocusOut = {
+      name: 'hideOnEscAndFocusOut',
+      defaultValue: true,
+      fn(instance) {
+        const dismiss = () => {
+          // A show scheduled by the trigger delay would otherwise reopen it
+          instance.clearDelayTimeouts();
+          instance.hide();
+        };
+        const onKeyDown = (event) => {
+          if (event.key !== 'Escape') {
+            return;
+          }
+          // Keep Esc from also reaching page handlers (e.g. reveal.js overview),
+          // except an open reveal.js slide menu, which Esc should close too.
+          // The menu handles keys only when its keyboard option is on.
+          const menuHandlesEsc = window.Reveal?.getPlugin?.('menu')?.isOpen() &&
+            window.Reveal.getConfig().menu?.keyboard !== false;
+          if (!menuHandlesEsc) {
+            event.stopPropagation();
+          }
+          if (instance.popper.contains(window.document.activeElement)) {
+            // Disabled while refocusing so the focus trigger does not reopen it
+            instance.disable();
+            instance.reference.focus();
+            instance.enable();
+          }
+          dismiss();
+        };
+        const onFocusOut = (event) => {
+          const target = event.relatedTarget;
+          if (target && !instance.reference.contains(target) &&
+              !instance.popper.contains(target)) {
+            dismiss();
+          }
+        };
+        // On the trigger too: a click trigger (code-annotations: select) has no
+        // blur handling. Attached for the instance's lifetime so leaving the
+        // trigger also cancels a show still pending on the trigger delay.
+        instance.reference.addEventListener('focusout', onFocusOut);
+        return {
+          onShow() {
+            window.document.addEventListener('keydown', onKeyDown, true);
+            instance.popper.addEventListener('focusout', onFocusOut);
+          },
+          onHide() {
+            window.document.removeEventListener('keydown', onKeyDown, true);
+            instance.popper.removeEventListener('focusout', onFocusOut);
+          },
+          onDestroy() {
+            instance.reference.removeEventListener('focusout', onFocusOut);
+          },
+        };
+      },
+    };
     function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
       const config = {
         allowHTML: true,
@@ -297,6 +385,7 @@ ul.task-list li input[type="checkbox"] {
         interactiveBorder: 10,
         theme: 'quarto',
         placement: 'bottom-start',
+        plugins: [hideOnEscAndFocusOut],
       };
       if (contentFn) {
         config.content = contentFn;
@@ -459,44 +548,54 @@ ul.task-list li input[type="checkbox"] {
           const lineIds = lines.map((line) => {
             return targetCell + "-" + line;
           })
-          let top = null;
-          let height = null;
-          let parent = null;
+          // Each band is positioned against its own containing block, which is
+          // not the offsetParent of the lines, so place it from client rects.
+          const placeBand = (band, firstEl, lastEl, codeBlock) => {
+            const container = band.offsetParent;
+            if (container === null) {
+              return;
+            }
+            const containerRect = container.getBoundingClientRect();
+            // Reveal.js scales slides with a transform, so convert client
+            // pixels back to the CSS pixels of the container.
+            const scale = containerRect.height / container.offsetHeight || 1;
+            const firstRect = firstEl.getBoundingClientRect();
+            const lastRect = lastEl.getBoundingClientRect();
+            const top = (firstRect.top - containerRect.top) / scale - container.clientTop + container.scrollTop;
+            const height = (lastRect.bottom - firstRect.top) / scale;
+            band.style.top = top - 2 + "px";
+            band.style.height = height + 4 + "px";
+            if (codeBlock) {
+              // Without the copy button wrapper, the containing block is wider
+              // than the code block, so span the code block explicitly.
+              const blockRect = codeBlock.getBoundingClientRect();
+              band.style.left = (blockRect.left - containerRect.left) / scale - container.clientLeft + container.scrollLeft + "px";
+              band.style.width = blockRect.width / scale + "px";
+            }
+          };
           if (lineIds.length > 0) {
-              //compute the position of the single el (top and bottom and make a div)
-              const el = window.document.getElementById(lineIds[0]);
-              top = el.offsetTop;
-              height = el.offsetHeight;
-              parent = el.parentElement.parentElement;
-            if (lineIds.length > 1) {
-              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
-              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
-              height = bottom - top;
+            const el = window.document.getElementById(lineIds[0]);
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const parent = el.parentElement.parentElement;
+            // cook up a div (if necessary) and position it
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
             }
-            if (top !== null && height !== null && parent !== null) {
-              // cook up a div (if necessary) and position it 
-              let div = window.document.getElementById("code-annotation-line-highlight");
-              if (div === null) {
-                div = window.document.createElement("div");
-                div.setAttribute("id", "code-annotation-line-highlight");
-                div.style.position = 'absolute';
-                parent.appendChild(div);
-              }
-              div.style.top = top - 2 + "px";
-              div.style.height = height + 4 + "px";
-              div.style.left = 0;
-              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
-              if (gutterDiv === null) {
-                gutterDiv = window.document.createElement("div");
-                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
-                gutterDiv.style.position = 'absolute';
-                const codeCell = window.document.getElementById(targetCell);
-                const gutter = codeCell.querySelector('.code-annotation-gutter');
-                gutter.appendChild(gutterDiv);
-              }
-              gutterDiv.style.top = top - 2 + "px";
-              gutterDiv.style.height = height + 4 + "px";
+            placeBand(div, el, lastEl, parent.closest("div.sourceCode") || parent);
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
             }
+            placeBand(gutterDiv, el, lastEl);
             selectedAnnoteEl = annoteEl;
           }
         };
@@ -594,6 +693,9 @@ ul.task-list li input[type="checkbox"] {
       }
     }
   });
+  </script>
+  <script type="application/javascript">
+  window.quartoScrollableRegionsLabels = {"code":"Scrollable code","output":"Scrollable output"};
   </script>
 </div> <!-- /content -->
 
