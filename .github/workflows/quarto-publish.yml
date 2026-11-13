@@ -47,18 +47,6 @@ jobs:
           libglpk-dev \
           libsqlite3-dev \
           libmagick++-dev
-          
-      - name: Install System Dependencies for 'terra'
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y libgdal-dev libgeos-dev libproj-dev
-
-      - name: Install R Dependencies
-        uses: r-lib/actions/setup-r-dependencies@v2
-        with:
-          packages: |
-            any::terra
-            any::rmarkdown
 
         
       - name: Install R dependencies
@@ -78,6 +66,20 @@ jobs:
           cat("Installing Quarto-critical packages directly into R_LIBS_USER\n")
           install.packages(c("xfun", "knitr", "rmarkdown"), repos = "https://cloud.r-project.org", lib = lib)
         shell: Rscript {0}
+        
+      - name: Install System Dependencies for 'terra'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libgdal-dev libgeos-dev libproj-dev
+
+      - name: Install R Dependencies
+        uses: r-lib/actions/setup-r-dependencies@v2
+        with:
+          packages: |
+            any::terra
+            any::raster
+            any::leaflet
+            any::rmarkdown
 
       - name: Verify Quarto R packages
         run: |
